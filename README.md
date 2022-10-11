@@ -66,7 +66,7 @@ App that allows board-game players to connect with one another, schedule meetups
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
+* [fill out your first tab].
 * [fill out your second tab]
 * [fill out your third tab]
 
