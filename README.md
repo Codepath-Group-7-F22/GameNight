@@ -70,21 +70,21 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 
 **Tab Navigation** (Tab to Screen)
 
-* Profile
+* Home
 * Users
 * Board Games
+* Events
 * Top Bar Navigation: Add Profile Picture, Settings on Top.. could base off of reddit's UI
 * Search bar on top, nav options (arrow back)
 
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+ * Login -> Show to Homescreen
+ * Homescreen Profile Icon -> Profile screen pops up from bottom
+ * Events -> + on top right will prompt you to create a new meetup
+ * Users -> User profile screen
+ 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
