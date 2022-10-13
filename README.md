@@ -82,9 +82,10 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 
  * Login -> Show to Homescreen
  * Homescreen Profile Icon -> Profile screen pops up from bottom
- * Events -> + on top right will prompt you to create a new meetup
+ * Events -> New Event + on top right will prompt you to create a new meetup
+ * New Event -> Events, once finished creating
  * Users -> User profile screen
- 
+
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
