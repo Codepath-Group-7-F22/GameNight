@@ -11,16 +11,16 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-App that allows board-game players to connect with one another, schedule meetups, and grab information on board games.
+GameNight is a social networking app that allows board-game enthusiasts to connect with one another, schedule meetups, and grab information on board games.
 
 ### App Evaluation
 
 - **Category:** Social Media
-- **Mobile:**
-- **Story:**
-- **Market:** Board-game players, or people that want to start playing
-- **Habit:**
-- **Scope:**
+- **Mobile:** This app is primarily designed for mobile iOS users, but could work on a computer as well in the future. 
+- **Story:** Analyzes user location and board game preferences, and connects them to users in their area or globally (depending on preferences of user). Users can then send messages to each other and schedule a meetup if desired.
+- **Market:** Anyone can use this app, but it's made specifically for board-game players, or people that want to start playing. To make our app a safe environment, we could add a restriction so that it's 18+.
+- **Habit:** Can be used as frequently as the user desires, depending on how often they'd like to meet new people and/or play board games.
+- **Scope:** We'll first start out as an app, with potential for use with online gaming systems, such as Steam, Discord, or DndBeyond.
 
 ## Product Spec
 
