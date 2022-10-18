@@ -49,39 +49,51 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
     * ![](https://i.imgur.com/0uQEev9.png)
 * Login Screen
    * User is given option to either login or sign up for an account
-   * Upon closing the application, the user will stay logged in upon reopening
-* Scrolling Screen to Find Open Games
+   * Upon closing the application, the user will stay logged in upon
+    reopening
+   * 2 Buttons for Forgot Password & Reset Password
+* Scrolling Screen to Find Upcoming Meetups
     * TableView
-
-* Game Description Screen 
+    * TableView Cell - Name of Game, Host Author, Profile Picture.
+    * Search bar on top, allows user to scroll through meetups
+* Meetup Description Screen 
    * Allows user to view game picture, description, number of players, age range.
+   * Place for user to comment
+* Meetup Creation Screen
+   * Allows user to create a meetup to play a certain game.
+   * User can choose from a list of board games or input their own
+* Scrolling Screen to find Board Games
+   * User can scroll through a list of board games that we've pre-added to the app
+* Board Game Description Screen
+   * User can view information about board game
+* User Scrolling Screen
+   * Scrolling view of other users
 * User Profile Screen
    * Allows user to view user profile picture and information
+   * Edit Button, when clicked -> User Edit Profile Screen
 * User Edit Profile Screen 
    * Allows user to upload a photo and fill in information about themselves
-* Search Screen 
-   * Allows user to search for other users and/or board games
+   * Button on bottom to save new edit information
 * Message Screen (nice to have but not necessary)
    * Allows user to send and receive messages with another user, and return to the messages saved when they exit the chat.
-* Game/Meetup Creation Screen
-   * Allows user to create a meetup to play a certain game.
+   * Back4App has info on peer-to-peer chat!
+
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Home
+* Scrolling Screen to find Upcoming Meetups
+* Profile
 * Users
 * Board Games
-* Events
 * Top Bar Navigation: Add Profile Picture, Settings on Top.. could base off of reddit's UI
 * Search bar on top, nav options (arrow back)
 
 
 **Flow Navigation** (Screen to Screen)
 
- * Login -> Show to Homescreen
- * Homescreen Profile Icon -> Profile screen pops up from bottom
+ * Login -> Show to Scrolling Screen
  * Events -> New Event + on top right will prompt you to create a new meetup
  * New Event -> Events, once finished creating
  * Users -> User profile screen
@@ -100,6 +112,28 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 ### Models
 [Add table of models]
 ### Networking
+* Loading Screen
+   * 
+* Login Screen
+   * 
+* Scrolling Screen to Find Upcoming Meetups
+   * 
+* Meetup Description Screen 
+   * 
+* Meetup Creation Screen
+   * 
+* Scrolling Screen to find Board Games
+   * 
+* Board Game Description Screen
+   * 
+* User Scrolling Screen
+   * 
+* User Profile Screen
+   * 
+* User Edit Profile Screen 
+   * 
+* Message Screen (nice to have but not necessary)
+
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
