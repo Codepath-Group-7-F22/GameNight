@@ -118,7 +118,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 <img src="Game Object.png" width = 600>
 
 * Comment Object
-<img src="Comment Object.png" width = 600> 
+<img src="Comments Object.png" width = 600> 
 
 ### Models
 
