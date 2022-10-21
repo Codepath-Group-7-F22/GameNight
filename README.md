@@ -107,10 +107,19 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
+## Schema
+* User Object
 <img src="User Object.png" width = 600>
 
-<img src="Schema.png" width=600>
+* Session Object 
+<img src="Session Object.png" width = 600>
+
+* Game Object
+<img src="Game Object.png" width = 600>
+
+* Comment Object
+<img src="Comment Object.png" width = 600> 
+
 ### Models
 
 
