@@ -108,7 +108,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-<img src="schema.png" width=600>
+<img src="Schema.png" width=600>
 ### Models
 
 
@@ -118,21 +118,39 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 * Login Screen
    * 
 * Scrolling Screen to Find Upcoming Meetups
-   * 
+   * (READ/GET): Query all posts with a start date = to later than the current date
+   ```swift
+   let query = PFQuery(className:"MeetupPost")
+   query.whereKey("date", greaterThanorEqualTo: currentDate)
+   query.order(byDescending: "createdAt")
+   query.findObjectsInBackground { meetupPosts: [PFObject]?, error: Error?) in
+      if let error = error {
+         print(error.localizedDescrption)
+      } else if let meetupPosts = meetupPosts {
+         print("Successfully retrieved \(posts.count) post.")
+         /*Set labels in swift to be equal to data retrieved from the query */
+      }
+
+   }
+
+
+
+   ```
 * Meetup Description Screen 
-   * 
+   * (Create/POST): Create a new comment
 * Meetup Creation Screen
-   * 
+   * (Create/POST): Create a new meetup object
 * Scrolling Screen to find Board Games
-   * 
+   * (READ/GET): Query all board games in the database
 * Board Game Description Screen
-   * 
+   * (READ/GET): Query board game object data 
 * User Scrolling Screen
-   * 
+   * (READ/GET): Query user profile pictures & usernames
 * User Profile Screen
-   * 
+   * (READ/GET) Query logged in user object
 * User Edit Profile Screen 
-   * 
+   * (Update/PUT): Update user profile image
+   * (Update/PUT): Update user bio
 * Message Screen (nice to have but not necessary)
 
 - [Add list of network requests by screen ]
