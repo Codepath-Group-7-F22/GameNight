@@ -124,8 +124,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 
 
 ### Networking
-* Loading Screen
-   * 
+
 * Login Screen
    * (Sign-In): Query User database for matching username and password and logs user in if valid
    ```swift
@@ -141,7 +140,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
           }
   }
    ```
-   * (Sign-Up): Query User database for non-existing username, and create a new user before logging in
+ * (Sign-Up): Query User database for non-existing username, and create a new user before logging in
    ```swift
    let user = PFUser()
    user.username = usernameField.text
