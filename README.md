@@ -171,9 +171,6 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
       }
 
    }
-
-
-
    ```
 * Meetup Description Screen 
    * (Create/POST): Create a new comment
