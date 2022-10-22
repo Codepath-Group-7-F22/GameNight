@@ -202,6 +202,19 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
    * (Create/POST): Create a new meetup object
 * Scrolling Screen to find Board Games
    * (READ/GET): Query all board games in the database
+   ```swift
+   let query = PFQuery(className: "boardGames")
+        query.includeKeys(["title", "objectID"])
+        query.limit = 50
+        
+        query.findObjectsInBackground{ (posts, error) in
+            if games != nil {
+                self.games = games!
+                self.tableView.reloadData()
+            }
+            
+        }
+    ```
 * Board Game Description Screen
    * (READ/GET): Query board game object data 
 * User Scrolling Screen
