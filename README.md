@@ -127,7 +127,35 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 * Loading Screen
    * 
 * Login Screen
-   * 
+   * (Sign-In): Query User database for matching username and password and logs user in if valid
+   ```swift
+  let username = usernameField.text!
+  let password = passwordField.text!
+
+  PFUser.logInWithUsername(inBackground: username, password: password)
+      { (user, error) in
+          if user != nil {
+              self.performSegue(withIdentifier: "loginSegue", sender: nil)
+          } else {
+              print("Error: \(error?.localizedDescription)")
+          }
+  }
+   ```
+   * (Sign-Up): Query User database for non-existing username, and create a new user before logging in
+   ```swift
+   let user = PFUser()
+   user.username = usernameField.text
+   user.password = passwordField.text
+
+   user.signUpInBackground { (success, error) in
+       if success {
+           self.performSegue(withIdentifier: "loginSegue", sender: nil)
+       } else {
+           print("Error: \(error?.localizedDescription)")
+       }
+   }
+   ```
+   *
 * Scrolling Screen to Find Upcoming Meetups
    * (READ/GET): Query all posts with a start date = to later than the current date
    ```swift
