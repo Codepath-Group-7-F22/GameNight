@@ -195,6 +195,28 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
    ```
 * Meetup Creation Screen
    * (Create/POST): Create a new meetup object
+   ```
+   let meetup = PFObject(className: "Sessions")
+   let new_date = Date.init()
+   
+   meetup["title"] =  title.text
+   meetup["typeOfBoardGame"] = genre.text
+   meetup["author"] = PFUser.current()!
+   meetup["description"] = description.text
+   meetup["startDate"] = startDate.text
+   meetup["endDate"] = endDate.text
+   meetup["createdAtDate"] = new_date
+   meetup["updatedAtDate"] = new_date
+
+   sessions.saveInBackground{ (success, error) in
+        if success {
+             print("Meetup saved.")
+        } else {
+            print("Meetup not saved, error occurred.")
+        }
+    }
+    ```
+
 * Scrolling Screen to find Board Games
    * (READ/GET): Query all board games in the database
    ```swift
@@ -212,6 +234,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
     ```
 * Board Game Description Screen
    * (READ/GET): Query board game object data 
+   
 * User Scrolling Screen
    * (READ/GET): Query user profile pictures & usernames
 * User Profile Screen
