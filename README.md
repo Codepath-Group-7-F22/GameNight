@@ -103,10 +103,6 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 [Add picture of your hand sketched wireframes in this section]
 <img src="figma.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema
 * User Object
 <img src="User Object.png" width = 600>
