@@ -155,7 +155,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
        }
    }
    ```
-   *
+
 * Scrolling Screen to Find Upcoming Meetups
    * (READ/GET): Query all posts with a start date = to later than the current date
    ```swift
@@ -174,6 +174,30 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
    ```
 * Meetup Description Screen 
    * (Create/POST): Create a new comment
+   // create the comment
+   ```swift
+        let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
+        
+        selectedPost.add(comment, forKey: "comments")
+        
+        selectedPost.saveInBackground{ (success, error) in
+            if success {
+                print("Comment saved.")
+            } else {
+                print("Comment not saved, error occurred.")
+            }
+        }
+        tableView.reloadData()
+        
+        // clear and dismiss the input bar
+        commentBar.inputTextView.text = nil
+        showsCommentBar = false
+        becomeFirstResponder()
+        commentBar.inputTextView.resignFirstResponder()
+   ```
 * Meetup Creation Screen
    * (Create/POST): Create a new meetup object
 * Scrolling Screen to find Board Games
