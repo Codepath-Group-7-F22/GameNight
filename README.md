@@ -221,7 +221,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
    * (READ/GET): Query all board games in the database
    ```swift
    let query = PFQuery(className: "boardGames")
-        query.includeKeys(["title", "objectID"])
+        query.includeKeys(["title"])
         query.limit = 50
         
         query.findObjectsInBackground{ (posts, error) in
@@ -234,11 +234,25 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
     ```
 * Board Game Description Screen
    * (READ/GET): Query board game object data 
+   ```swift
+   var query = PFQuery(className:"gameObject")
+   var gameObject = query.getObjectInBackgroundWithId("ObjectID")
+    ```
    
 * User Scrolling Screen
    * (READ/GET): Query user profile pictures & usernames
+   ```swift
+   var query = PFQuery(className:"user")
+   var currUser = query.getObjectInBackgroundWithId("userID")
+   var name = currUser["username"]
+   var profileImage = currUser["image"]
+    ```
 * User Profile Screen
    * (READ/GET) Query logged in user object
+   ```swift
+   var query = PFQuery(className:"user")
+   var currUser = query.getObjectInBackgroundWithId("userID")
+   ```
 * User Edit Profile Screen 
    * (Update/PUT): Update user profile image
    * (Update/PUT): Update user bio
