@@ -17,6 +17,10 @@
 		21F460E32904728C0032E157 /* GameNightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460E22904728C0032E157 /* GameNightTests.swift */; };
 		21F460ED2904728C0032E157 /* GameNightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460EC2904728C0032E157 /* GameNightUITests.swift */; };
 		21F460EF2904728C0032E157 /* GameNightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460EE2904728C0032E157 /* GameNightUITestsLaunchTests.swift */; };
+		28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */; };
+		28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */; };
+		28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */; };
+		28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */; };
 		726C8C3522BFF500C2BFC0C4 /* Pods_GameNight_GameNightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F933914C0C247988F33F021C /* Pods_GameNight_GameNightUITests.framework */; };
 		881B009E5A081A346D4E59AA /* Pods_GameNightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C728F093BD75E5695668EF9D /* Pods_GameNightTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +58,10 @@
 		21F460E82904728C0032E157 /* GameNightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F460EC2904728C0032E157 /* GameNightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightUITests.swift; sourceTree = "<group>"; };
 		21F460EE2904728C0032E157 /* GameNightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMeetUpsViewController.swift; sourceTree = "<group>"; };
+		28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGamesViewController.swift; sourceTree = "<group>"; };
+		28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		30FD798A755C38C8FB0AE8F1 /* Pods-GameNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight.release.xcconfig"; path = "Target Support Files/Pods-GameNight/Pods-GameNight.release.xcconfig"; sourceTree = "<group>"; };
 		5140518C3197A9E108B8FA7B /* Pods-GameNightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNightTests.release.xcconfig"; path = "Target Support Files/Pods-GameNightTests/Pods-GameNightTests.release.xcconfig"; sourceTree = "<group>"; };
 		5316C1BE1D8193F277329083 /* Pods_GameNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +131,10 @@
 				21F460D42904728C0032E157 /* Assets.xcassets */,
 				21F460D62904728C0032E157 /* LaunchScreen.storyboard */,
 				21F460D92904728C0032E157 /* Info.plist */,
+				28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */,
+				28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */,
+				28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */,
+				28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -154,7 +166,6 @@
 				10CCC9C012237495C562B4D4 /* Pods-GameNightTests.debug.xcconfig */,
 				5140518C3197A9E108B8FA7B /* Pods-GameNightTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -372,7 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F460D02904728A0032E157 /* ViewController.swift in Sources */,
+				28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */,
+				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
+				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,
+				28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */,
 				21F460CE2904728A0032E157 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
