@@ -10,7 +10,6 @@
 		1FC72ED2F6B521D2D979A83B /* Pods_GameNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5316C1BE1D8193F277329083 /* Pods_GameNight.framework */; };
 		21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CB2904728A0032E157 /* AppDelegate.swift */; };
 		21F460CE2904728A0032E157 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CD2904728A0032E157 /* SceneDelegate.swift */; };
-		21F460D02904728A0032E157 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CF2904728A0032E157 /* ViewController.swift */; };
 		21F460D32904728A0032E157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F460D12904728A0032E157 /* Main.storyboard */; };
 		21F460D52904728C0032E157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F460D42904728C0032E157 /* Assets.xcassets */; };
 		21F460D82904728C0032E157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F460D62904728C0032E157 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,7 @@
 		28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */; };
 		726C8C3522BFF500C2BFC0C4 /* Pods_GameNight_GameNightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F933914C0C247988F33F021C /* Pods_GameNight_GameNightUITests.framework */; };
 		881B009E5A081A346D4E59AA /* Pods_GameNightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C728F093BD75E5695668EF9D /* Pods_GameNightTests.framework */; };
+		CAE8CBB72905B1F70096521C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8CBB62905B1F70096521C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 		21F460C82904728A0032E157 /* GameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F460CB2904728A0032E157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21F460CD2904728A0032E157 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21F460CF2904728A0032E157 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21F460D22904728A0032E157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21F460D42904728C0032E157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21F460D72904728C0032E157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		5316C1BE1D8193F277329083 /* Pods_GameNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0389AF88CB9B7CAEF935ADB /* Pods-GameNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight.debug.xcconfig"; path = "Target Support Files/Pods-GameNight/Pods-GameNight.debug.xcconfig"; sourceTree = "<group>"; };
 		C728F093BD75E5695668EF9D /* Pods_GameNightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE8CBB62905B1F70096521C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7E4C51AB79274A10C0CDB76 /* Pods-GameNight-GameNightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight-GameNightUITests.debug.xcconfig"; path = "Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F933914C0C247988F33F021C /* Pods_GameNight_GameNightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNight_GameNightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,7 +126,6 @@
 			children = (
 				21F460CB2904728A0032E157 /* AppDelegate.swift */,
 				21F460CD2904728A0032E157 /* SceneDelegate.swift */,
-				21F460CF2904728A0032E157 /* ViewController.swift */,
 				21F460D12904728A0032E157 /* Main.storyboard */,
 				21F460D42904728C0032E157 /* Assets.xcassets */,
 				21F460D62904728C0032E157 /* LaunchScreen.storyboard */,
@@ -135,6 +134,7 @@
 				28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */,
 				28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */,
 				28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */,
+				CAE8CBB62905B1F70096521C /* LoginViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -190,6 +190,7 @@
 				21F460C42904728A0032E157 /* Sources */,
 				21F460C52904728A0032E157 /* Frameworks */,
 				21F460C62904728A0032E157 /* Resources */,
+				BE619608D6EADA3756A6674C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +228,7 @@
 				21F460E42904728C0032E157 /* Sources */,
 				21F460E52904728C0032E157 /* Frameworks */,
 				21F460E62904728C0032E157 /* Resources */,
+				E1702A60DECDF4FA8377EB65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,6 +377,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BE619608D6EADA3756A6674C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNight/Pods-GameNight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNight/Pods-GameNight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameNight/Pods-GameNight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1702A60DECDF4FA8377EB65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -382,7 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F460D02904728A0032E157 /* ViewController.swift in Sources */,
+				CAE8CBB72905B1F70096521C /* LoginViewController.swift in Sources */,
 				28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */,
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
