@@ -22,6 +22,7 @@
 		28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */; };
 		726C8C3522BFF500C2BFC0C4 /* Pods_GameNight_GameNightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F933914C0C247988F33F021C /* Pods_GameNight_GameNightUITests.framework */; };
 		881B009E5A081A346D4E59AA /* Pods_GameNightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C728F093BD75E5695668EF9D /* Pods_GameNightTests.framework */; };
+		CAA5E87B29089C0C00083EFD /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA5E87A29089C0C00083EFD /* UserEditProfileViewController.swift */; };
 		CAE8CBB72905B1F70096521C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8CBB62905B1F70096521C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		5316C1BE1D8193F277329083 /* Pods_GameNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0389AF88CB9B7CAEF935ADB /* Pods-GameNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight.debug.xcconfig"; path = "Target Support Files/Pods-GameNight/Pods-GameNight.debug.xcconfig"; sourceTree = "<group>"; };
 		C728F093BD75E5695668EF9D /* Pods_GameNightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA5E87A29089C0C00083EFD /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
 		CAE8CBB62905B1F70096521C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7E4C51AB79274A10C0CDB76 /* Pods-GameNight-GameNightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight-GameNightUITests.debug.xcconfig"; path = "Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F933914C0C247988F33F021C /* Pods_GameNight_GameNightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNight_GameNightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */,
 				28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */,
 				CAE8CBB62905B1F70096521C /* LoginViewController.swift */,
+				CAA5E87A29089C0C00083EFD /* UserEditProfileViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				CAE8CBB72905B1F70096521C /* LoginViewController.swift in Sources */,
 				28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */,
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
+				CAA5E87B29089C0C00083EFD /* UserEditProfileViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,
 				28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */,

@@ -9,13 +9,22 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
 
+    
+    @IBOutlet weak var userprofileView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var userageLabel: UILabel!
+    @IBOutlet weak var userbioLabel: UILabel!
+    @IBOutlet weak var userlocationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func editProfile(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
