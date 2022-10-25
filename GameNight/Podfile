@@ -6,6 +6,7 @@ target 'GameNight' do
   use_frameworks!
 
   # Pods for GameNight
+  pod "Parse"
 
   target 'GameNightTests' do
     inherit! :search_paths
