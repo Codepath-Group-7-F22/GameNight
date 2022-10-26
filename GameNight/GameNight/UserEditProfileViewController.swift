@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -26,6 +27,28 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     
 
     @IBAction func onSaveButton(_ sender: Any) {
+        let userProfile = PFObject(className: "UserProfile")
+        
+        userProfile["name"] = nameField.text ?? ""
+        userProfile["bio"] = bioField.text ?? ""
+        userProfile["age"] = Int(ageField.text!)
+        userProfile["location"] = locationField.text ?? ""
+        userProfile["user"] = PFUser.current()!
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        userProfile["proPic"] = file
+        
+        userProfile.saveInBackground { (success, error) in
+            if success {
+                print("saved")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("error")
+            }
+        }
+        
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
