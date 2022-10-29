@@ -100,6 +100,7 @@
                         <outlet property="passwordField" destination="W4T-az-3yg" id="eAu-xr-eIh"/>
                         <outlet property="usernameField" destination="OM8-x5-deI" id="Z4N-NK-NfF"/>
                         <segue destination="P3E-U1-6Op" kind="presentation" identifier="signUpSegue" id="i0Z-St-Sbo"/>
+                        <segue destination="Pf0-Hj-Un4" kind="presentation" identifier="loginSegue" id="su2-Kw-HNG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -156,6 +157,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Sign up"/>
                                                 <connections>
+                                                    <action selector="onSignUp:" destination="P3E-U1-6Op" eventType="touchUpInside" id="ZBS-Lf-V4X"/>
                                                     <action selector="onSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDB-JJ-xki"/>
                                                 </connections>
                                             </button>
@@ -216,7 +218,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="fZH-4u-zTo"/>
                     <connections>
+                        <outlet property="emailField" destination="nly-oG-toh" id="y7T-m0-OFe"/>
+                        <outlet property="firstNameField" destination="ehe-pf-IB4" id="TvU-AP-Esf"/>
+                        <outlet property="lastNameField" destination="KbA-8j-JdE" id="6ls-4U-T98"/>
+                        <outlet property="passwordField" destination="Y3z-FB-VXI" id="1bV-ek-ECQ"/>
                         <outlet property="scrollView" destination="Zla-VJ-a5F" id="hQP-dl-Rde"/>
+                        <outlet property="usernameField" destination="Ksl-IQ-g6o" id="FVq-OG-y35"/>
+                        <segue destination="EXt-8y-TYk" kind="presentation" identifier="registrationComplete" id="uxk-kc-XWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtE-Ba-ZAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -374,10 +382,10 @@
             </objects>
             <point key="canvasLocation" x="-1758" y="1529"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration Complete View Controller-->
         <scene sceneID="Jw0-ES-3eW">
             <objects>
-                <viewController id="EXt-8y-TYk" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="EXt-8y-TYk" customClass="RegistrationCompleteViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uNi-C4-BNb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,7 +402,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account has been created succesfully. Click the button to sign in." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-lp-YWU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account has been created succesfully. Click the button to go back and sign in." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-lp-YWU">
                                                 <rect key="frame" x="16" y="235.5" width="382" height="97"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <nil key="textColor"/>
@@ -405,6 +413,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Sign in"/>
                                                 <connections>
+                                                    <action selector="goBackToSignIn:" destination="EXt-8y-TYk" eventType="touchUpInside" id="R8l-KO-SWK"/>
                                                     <action selector="onSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6pz-6l-CMY"/>
                                                 </connections>
                                             </button>
@@ -445,10 +454,13 @@
                             <constraint firstItem="Fb8-So-R6Y" firstAttribute="trailing" secondItem="66J-Aq-hNR" secondAttribute="trailing" id="uyp-fu-2je"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goBackToSignIn" id="IdB-Aa-dfS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whx-OH-2D6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2893" y="1529"/>
+            <point key="canvasLocation" x="-3800" y="1604"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="e46-8w-udy">
