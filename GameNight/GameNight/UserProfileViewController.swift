@@ -10,10 +10,14 @@ import Parse
 
 class UserProfileViewController: UIViewController {
 
+    
+    @IBOutlet weak var profilePicView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Make Profile Pic Circular
+        profilePicView.setRounded()
     }
     
     @IBAction func onLogout(_ sender: Any) {
@@ -39,4 +43,15 @@ class UserProfileViewController: UIViewController {
     }
     */
 
+}
+
+extension UIImageView {
+    func setRounded() {
+        //Make profile image rounded
+        self.layer.cornerRadius = (self.frame.height / 2)
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        clipsToBounds = true
+        self.layer.masksToBounds = true
+    }
 }
