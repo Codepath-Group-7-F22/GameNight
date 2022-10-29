@@ -256,5 +256,5 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
    * (Update/PUT): Update user bio
 * Message Screen (nice to have but not necessary)
 
-## Week 1 Progress
+## Week_1
 
