@@ -1,8 +1,5 @@
 GameNight App Design Project - README
 ===
-
-# GameNight
-
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
