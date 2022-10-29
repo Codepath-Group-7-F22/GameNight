@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class BoardGamesViewController: UIViewController {
 
@@ -15,7 +16,15 @@ class BoardGamesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogotu(_ sender: Any) {
+        PFUser.logOut()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "loginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
+        delegate.window?.rootViewController = loginViewController
+    }
+    
     /*
     // MARK: - Navigation
 
