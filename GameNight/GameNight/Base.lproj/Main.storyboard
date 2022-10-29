@@ -99,7 +99,7 @@
                     <connections>
                         <outlet property="passwordField" destination="W4T-az-3yg" id="eAu-xr-eIh"/>
                         <outlet property="usernameField" destination="OM8-x5-deI" id="Z4N-NK-NfF"/>
-                        <segue destination="Pf0-Hj-Un4" kind="presentation" identifier="loginSegue" id="Gc0-lI-bAw"/>
+                        <segue destination="P3E-U1-6Op" kind="presentation" identifier="signUpSegue" id="i0Z-St-Sbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,7 +109,7 @@
         <!--Registration View Controller-->
         <scene sceneID="nes-sQ-fez">
             <objects>
-                <viewController id="P3E-U1-6Op" customClass="RegistrationViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="P3E-U1-6Op" customClass="RegistrationViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J51-9w-7mv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +214,7 @@
                             <constraint firstItem="Zla-VJ-a5F" firstAttribute="bottom" secondItem="rTv-ZC-CbO" secondAttribute="bottom" id="jB3-bD-Y7f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fZH-4u-zTo"/>
                     <connections>
                         <outlet property="scrollView" destination="Zla-VJ-a5F" id="hQP-dl-Rde"/>
                     </connections>
