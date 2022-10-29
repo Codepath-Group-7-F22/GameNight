@@ -1,4 +1,4 @@
-Original App Design Project - README Template
+GameNight App Design Project - README
 ===
 
 # GameNight
