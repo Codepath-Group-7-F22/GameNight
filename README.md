@@ -5,7 +5,7 @@ GameNight App Design Project - README
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
-5. [Week 1 Progress](#Week 1 Progress)
+5. [Week 1 Progress](#Week_1)
 
 ## Overview
 ### Description
