@@ -9,9 +9,17 @@ import UIKit
 
 class UserEditProfileViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var fnameField: UITextField!
+    @IBOutlet weak var lnameField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fnameField.attributedPlaceholder = NSAttributedString(string: "First Name")
+        lnameField.attributedPlaceholder = NSAttributedString(string: "Last Name")
         // Do any additional setup after loading the view.
     }
     

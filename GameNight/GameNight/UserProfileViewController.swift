@@ -10,15 +10,47 @@ import Parse
 
 class UserProfileViewController: UIViewController {
 
+    let user = PFUser.current()
     
     @IBOutlet weak var profilePicView: UIImageView!
+    @IBOutlet weak var fnameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getProfile()
 
         //Make Profile Pic Circular
         profilePicView.setRounded()
     }
+    
+    func getProfile() {
+        //Set up User's Profile View
+        let query = PFQuery(className:"UserProfile")
+        query.whereKey("user", equalTo: user!)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                for object in objects {
+                    print(object as Any)
+                    
+                    self.fnameLabel.text = object["firstName"] as? String
+                    //Want to create a set profile function
+                }
+            }
+        }
+
+    }
+    
+
     
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
