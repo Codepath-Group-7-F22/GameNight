@@ -16,6 +16,7 @@
 		21F460E32904728C0032E157 /* GameNightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460E22904728C0032E157 /* GameNightTests.swift */; };
 		21F460ED2904728C0032E157 /* GameNightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460EC2904728C0032E157 /* GameNightUITests.swift */; };
 		21F460EF2904728C0032E157 /* GameNightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460EE2904728C0032E157 /* GameNightUITestsLaunchTests.swift */; };
+		2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */; };
 		289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AD6252907973A006A0980 /* RegistrationViewController.swift */; };
 		28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */; };
 		28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */; };
@@ -58,6 +59,7 @@
 		21F460E82904728C0032E157 /* GameNightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F460EC2904728C0032E157 /* GameNightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightUITests.swift; sourceTree = "<group>"; };
 		21F460EE2904728C0032E157 /* GameNightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCompleteViewController.swift; sourceTree = "<group>"; };
 		289AD6252907973A006A0980 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMeetUpsViewController.swift; sourceTree = "<group>"; };
 		28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				28AD234D2904BDA400FC37B8 /* PlayersViewController.swift */,
 				CAE8CBB62905B1F70096521C /* LoginViewController.swift */,
 				289AD6252907973A006A0980 /* RegistrationViewController.swift */,
+				2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,
+				2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */,
 				28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */,
 				21F460CE2904728A0032E157 /* SceneDelegate.swift in Sources */,
 			);

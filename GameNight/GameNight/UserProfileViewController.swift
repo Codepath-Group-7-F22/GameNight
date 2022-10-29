@@ -19,6 +19,10 @@ class UserProfileViewController: UIViewController {
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
         
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "hasLogin")
+        defaults.synchronize()
+        
         let main = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = main.instantiateViewController(withIdentifier: "loginViewController")
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
