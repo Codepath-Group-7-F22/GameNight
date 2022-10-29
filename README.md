@@ -256,6 +256,5 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
    * (Update/PUT): Update user bio
 * Message Screen (nice to have but not necessary)
 
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+## Week1
+
