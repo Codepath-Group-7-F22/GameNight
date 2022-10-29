@@ -16,10 +16,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     
+    @IBOutlet weak var resetPassword: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapResetPassword(sender:)))
+        
+        resetPassword.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapResetPassword(sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "tapResetPassword", sender: nil)
     }
     
     @IBAction func onLogin(_ sender: Any) {
