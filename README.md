@@ -26,19 +26,19 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 
 **Required Must-have Stories**
 
-* User sees a customized loading screen upon opening app
-* User can create an account and log in
-* User can create and delete a game session
-* User can find open games
-* User can see and edit their profile
-* User can view other profiles
+[]User sees a customized loading screen upon opening app
+[X]User can create an account and log in
+[]User can create and delete a game session
+[]User can find open games
+[]User can see and edit their profile
+[]User can view other profiles
 
 **Optional Nice-to-have Stories**
 
-* User can send and receive messages with other users
-* User must be 18+
-* User history in profile
-* Auto-save and auto-discard
+[]User can send and receive messages with other users
+[]User must be 18+
+[]User history in profile
+[]Auto-save and auto-discard
 
 ### 2. Screen Archetypes
 
