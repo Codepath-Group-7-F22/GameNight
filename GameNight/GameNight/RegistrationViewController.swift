@@ -59,6 +59,7 @@ class RegistrationViewController: UIViewController {
                 profile["user"] = user
                 profile["firstName"] = firstNameField.text
                 profile["lastName"] = lastNameField.text
+                //profile["location"] = locationField.text
                 
                 profile.saveInBackground { (success, error) in
                     if success {

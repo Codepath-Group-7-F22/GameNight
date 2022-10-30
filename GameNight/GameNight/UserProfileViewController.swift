@@ -20,10 +20,14 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getProfile()
-
+        
         //Make Profile Pic Circular
+        profilePicView.setRounded()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getProfile()
         profilePicView.setRounded()
     }
     
@@ -43,7 +47,10 @@ class UserProfileViewController: UIViewController {
                     print(object as Any)
                     
                     self.fnameLabel.text = object["firstName"] as? String
+                    self.locationLabel.text = object["location"] as? String
+                    self.bioLabel.text = object["bio"] as? String
                     //Want to create a set profile function
+                    
                 }
             }
         }
