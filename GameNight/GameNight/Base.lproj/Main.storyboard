@@ -531,13 +531,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ax-ht-eCx">
-                                <rect key="frame" x="0.0" y="40" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OE5-xY-5hK">
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <items>
                                     <navigationItem title="Edit Profile" id="5Kg-c5-ldC">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="vc0-lQ-yB5">
@@ -557,9 +554,6 @@
                                 <rect key="frame" x="87" y="173" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="3eC-1L-yJh" appends="YES" id="mI1-1m-Tia"/>
-                                </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-ZG-LaN">
                                 <rect key="frame" x="107" y="329" width="194" height="34"/>
@@ -593,7 +587,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33O-vt-mHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="3eC-1L-yJh"/>
             </objects>
             <point key="canvasLocation" x="1179.7101449275362" y="2234.5982142857142"/>
         </scene>
@@ -763,8 +756,8 @@
     <resources>
         <image name="Danny-DeVito-008" width="460" height="276"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="dice" catalog="system" width="128" height="116"/>
         <image name="dice" width="980" height="980"/>
+        <image name="dice" catalog="system" width="128" height="116"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="placeholder" width="420" height="420"/>

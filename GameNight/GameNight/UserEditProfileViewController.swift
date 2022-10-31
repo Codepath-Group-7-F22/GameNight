@@ -7,8 +7,9 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class UserEditProfileViewController: UIViewController {
+class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let user = PFUser.current()
     @IBOutlet weak var proPicView: UIImageView!
@@ -18,10 +19,35 @@ class UserEditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UserEditProfileViewController.onCameraButton))
+        proPicView.addGestureRecognizer(tap)
+        proPicView.isUserInteractionEnabled = true
 
         proPicView.setRounded()
         // Do any additional setup after loading the view.
     }
+    
+    @objc func onCameraButton(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        let size = CGSize(width:300, height: 300)
+        let scaledImg = image.af.imageScaled(to: size)
+        
+        proPicView.image = scaledImg
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+
     
     @IBAction func onSaveButton(_ sender: Any) {
         print("save button pressed")
@@ -29,17 +55,18 @@ class UserEditProfileViewController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
         print("dismissing controller")
-
         }
         
-
-    
 
     @IBAction func onCancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         print("cancelled user profile edits")
     }
-
+    
+    
+    
+    
+    
 
     func changeProfile() {
         //Set up User's Profile View
@@ -57,6 +84,11 @@ class UserEditProfileViewController: UIViewController {
                     object["firstName"] = self.fnameField.text
                     object["location"] = self.locationField.text
                     object["bio"] = self.bioField.text
+                    //upload image
+                    let imageData = self.proPicView.image!.pngData()
+                    let file = PFFileObject(name: "image.png", data: imageData!)
+                    object["proPic"] = file
+                    
                     
                     object.saveInBackground { (success, error) in
                         if success {
