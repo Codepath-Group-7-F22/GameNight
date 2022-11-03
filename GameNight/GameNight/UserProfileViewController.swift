@@ -64,6 +64,9 @@ class UserProfileViewController: UIViewController {
 
     }
     
+    override func viewWillLayoutSubviews() {
+        bioLabel.sizeToFit()
+    }
 
     
     @IBAction func onLogout(_ sender: Any) {

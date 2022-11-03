@@ -9,13 +9,15 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
     let user = PFUser.current()
     @IBOutlet weak var proPicView: UIImageView!
     @IBOutlet weak var fnameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
     @IBOutlet weak var bioField: UITextView!
+    var pickedImg = false
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,7 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
         let scaledImg = image.af.imageScaled(to: size)
         
         proPicView.image = scaledImg
+        pickedImg = true
         
         dismiss(animated: true, completion: nil)
     }
@@ -67,6 +70,20 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
         print("cancelled user profile edits")
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Placeholder"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
     
 
     func changeProfile() {
@@ -82,15 +99,22 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
                 print("Successfully editing profile.")
                 // Do something with the found object
                 for object in objects {
-                    object["firstName"] = self.fnameField.text
-                    object["location"] = self.locationField.text
-                    object["bio"] = self.bioField.text
+                    if self.fnameField.text != "" {
+                        object["firstName"] = self.fnameField.text
+                    }
+                    if self.locationField.text != "" {
+                        object["location"] = self.locationField.text
+                    }
+                    if self.bioField.text != "" {
+                        object["bio"] = self.bioField.text
+                    }
                     //upload image
                     let imageData = self.proPicView.image!.pngData()
-                    let file = PFFileObject(name: "image.png", data: imageData!)
-                    object["proPic"] = file
-                    
-                    
+                    if self.pickedImg == true  {
+                        let file = PFFileObject(name: "image.png", data: imageData!)
+                        object["proPic"] = file
+                    }
+                
                     object.saveInBackground { (success, error) in
                         if success {
                             print("successfully saved changes to profile")
