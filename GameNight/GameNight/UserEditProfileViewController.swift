@@ -9,7 +9,7 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let user = PFUser.current()
     @IBOutlet weak var proPicView: UIImageView!
@@ -68,20 +68,6 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     @IBAction func onCancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         print("cancelled user profile edits")
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "Placeholder"
-            textView.textColor = UIColor.lightGray
-        }
     }
     
     

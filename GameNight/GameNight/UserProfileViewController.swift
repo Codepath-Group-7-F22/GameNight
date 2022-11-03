@@ -21,8 +21,6 @@ class UserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getProfile()
-        
-        //Make Profile Pic Circular
         profilePicView.setRounded()
     }
     
@@ -56,16 +54,11 @@ class UserProfileViewController: UIViewController {
                         let url = URL(string: urlString!)!
                         self.profilePicView.af.setImage(withURL: url)
                     }
-                    //Want to create a set profile function
                     
                 }
             }
         }
 
-    }
-    
-    override func viewWillLayoutSubviews() {
-        bioLabel.sizeToFit()
     }
 
     
@@ -97,10 +90,16 @@ class UserProfileViewController: UIViewController {
 extension UIImageView {
     func setRounded() {
         //Make profile image rounded
-        self.layer.cornerRadius = (self.frame.height / 2)
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = self.frame.size.width / 2
         clipsToBounds = true
-        self.layer.masksToBounds = true
+        //border
+        self.layer.borderWidth = 4.0
+        self.layer.borderColor = UIColor.white.cgColor
+        //shadow
+        //self.layer.masksToBounds = false
+        //self.layer.shadowColor = UIColor.black.cgColor
+        //self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        //self.layer.shadowOpacity = 1.0
+        //self.layer.shadowRadius = 4.0
     }
 }
