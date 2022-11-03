@@ -45,10 +45,17 @@ class UserProfileViewController: UIViewController {
                 // Do something with the found objects
                 for object in objects {
                     print(object as Any)
-                    
+                    //Set up the n
                     self.fnameLabel.text = object["firstName"] as? String
                     self.locationLabel.text = object["location"] as? String
                     self.bioLabel.text = object["bio"] as? String
+                    
+                    let imageFile = object["proPic"] as? PFFileObject
+                    if imageFile != nil {
+                        let urlString = imageFile?.url!
+                        let url = URL(string: urlString!)!
+                        self.profilePicView.af.setImage(withURL: url)
+                    }
                     //Want to create a set profile function
                     
                 }

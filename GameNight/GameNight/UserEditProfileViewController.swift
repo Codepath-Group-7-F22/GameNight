@@ -20,15 +20,18 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Add a gesture recognizer onto the profile picture
         let tap = UITapGestureRecognizer(target: self, action: #selector(UserEditProfileViewController.onCameraButton))
         proPicView.addGestureRecognizer(tap)
         proPicView.isUserInteractionEnabled = true
-
+        
+        //Set profile picture to be circular
         proPicView.setRounded()
-        // Do any additional setup after loading the view.
+
     }
     
     @objc func onCameraButton(){
+        //Present Photo Gallery Images for user to choose
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
@@ -38,6 +41,7 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //Set new view of profilepicture when user is done choosing a photo from gallery
         let image = info[.editedImage] as! UIImage
         let size = CGSize(width:300, height: 300)
         let scaledImg = image.af.imageScaled(to: size)
@@ -64,9 +68,6 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     }
     
     
-    
-    
-    
 
     func changeProfile() {
         //Set up User's Profile View
@@ -79,7 +80,7 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
             } else if let objects = objects {
                 // The find succeeded.
                 print("Successfully editing profile.")
-                // Do something with the found objects
+                // Do something with the found object
                 for object in objects {
                     object["firstName"] = self.fnameField.text
                     object["location"] = self.locationField.text
@@ -92,7 +93,7 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
                     
                     object.saveInBackground { (success, error) in
                         if success {
-                            print("successfully saved changes")
+                            print("successfully saved changes to profile")
                         } else {
                             print("error :\(error?.localizedDescription)")
                         }
