@@ -524,6 +524,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mql-by-e8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1201" y="2260"/>
+        </scene>
+        <!--Board Game Categories-->
+        <scene sceneID="EDC-wB-6aX">
+            <objects>
+                <tableViewController id="0E7-En-h0N" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lc0-zW-7uT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PLJ-e5-Jd3">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PLJ-e5-Jd3" id="cM0-UT-FyZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0E7-En-h0N" id="nnx-bI-Nyr"/>
+                            <outlet property="delegate" destination="0E7-En-h0N" id="OfS-Py-ksK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Board Game Categories" id="ujd-vI-gHm">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="8ax-w1-fJF"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opd-Qi-Swt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="2090" y="1554"/>
         </scene>
         <!--Players-->
@@ -548,7 +579,7 @@
             </objects>
             <point key="canvasLocation" x="3074" y="1554"/>
         </scene>
-        <!--Title-->
+        <!--Meetups-->
         <scene sceneID="Tnl-bb-gR3">
             <objects>
                 <viewController storyboardIdentifier="gameMeetUpsViewController" id="drs-Wv-3M6" customClass="GameMeetUpsViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
@@ -558,7 +589,7 @@
                         <viewLayoutGuide key="safeArea" id="Q7I-gH-XgF"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="krd-W0-Goj">
+                    <navigationItem key="navigationItem" title="Meetups" id="krd-W0-Goj">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="MzV-k6-hBP">
                             <connections>
                                 <action selector="onLogout:" destination="drs-Wv-3M6" id="PDn-mB-Q36"/>
@@ -640,7 +671,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xlg-zz-nLA" kind="relationship" relationship="rootViewController" id="nKi-5v-ySN"/>
+                        <segue destination="0E7-En-h0N" kind="relationship" relationship="rootViewController" id="Tov-rQ-Ny2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKE-rL-bKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
