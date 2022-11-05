@@ -7,6 +7,7 @@ target 'GameNight' do
 
   # Pods for GameNight
   pod "Parse"
+  pod "AlamofireImage"
 
   target 'GameNightTests' do
     inherit! :search_paths
