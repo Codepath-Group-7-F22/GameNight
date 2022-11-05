@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class CategoriesTableViewController: UITableViewController {
     
@@ -21,8 +22,8 @@ class CategoriesTableViewController: UITableViewController {
         categoryTable.dataSource = self
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
-        
     }
+    
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,6 +42,18 @@ class CategoriesTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOut()
+        
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "hasLogin")
+        defaults.synchronize()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "loginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
+        delegate.window?.rootViewController = loginViewController
+    }
     /*
     // copied open source code for changing searchbar background courtesy of Alex Nadein
     // Article Link: "https://alexandernadein.medium.com/customizing-search-bar-color-1db7ceaffe5b"
@@ -60,7 +73,6 @@ class CategoriesTableViewController: UITableViewController {
         }
     }
     */
-
 }
 
 extension CategoriesTableViewController: UISearchResultsUpdating{
@@ -69,7 +81,12 @@ extension CategoriesTableViewController: UISearchResultsUpdating{
         categories = categoryData.displayableCategories.filter{ categories in
             categories.starts(with: searchText)
         }
+        print(categories.count)
         tableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("row: \(indexPath.row)")
     }
 }
 

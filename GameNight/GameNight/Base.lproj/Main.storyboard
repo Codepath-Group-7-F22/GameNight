@@ -568,7 +568,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Board Game Categories" id="ujd-vI-gHm">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="8ax-w1-fJF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="8ax-w1-fJF">
+                            <connections>
+                                <action selector="onLogout:" destination="0E7-En-h0N" id="dcd-sb-DLT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="categoryTable" destination="lc0-zW-7uT" id="hhA-oK-iPW"/>
