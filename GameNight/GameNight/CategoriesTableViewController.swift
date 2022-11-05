@@ -42,6 +42,10 @@ class CategoriesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(categories[indexPath[1]])
+    }
+    
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
         
@@ -83,10 +87,6 @@ extension CategoriesTableViewController: UISearchResultsUpdating{
         }
         print(categories.count)
         tableView.reloadData()
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        print("row: \(indexPath.row)")
     }
 }
 
