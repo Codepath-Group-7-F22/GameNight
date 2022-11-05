@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1FC72ED2F6B521D2D979A83B /* Pods_GameNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5316C1BE1D8193F277329083 /* Pods_GameNight.framework */; };
+		2132B03129159D0200F178A0 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2132B03029159D0200F178A0 /* CategoriesTableViewController.swift */; };
+		2132B0332915B4D800F178A0 /* categoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2132B0322915B4D800F178A0 /* categoryData.swift */; };
 		21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CB2904728A0032E157 /* AppDelegate.swift */; };
 		21F460CE2904728A0032E157 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CD2904728A0032E157 /* SceneDelegate.swift */; };
 		21F460D32904728A0032E157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F460D12904728A0032E157 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		10CCC9C012237495C562B4D4 /* Pods-GameNightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNightTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNightTests/Pods-GameNightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1909D1F8C429A7780129D5F0 /* Pods-GameNight-GameNightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight-GameNightUITests.release.xcconfig"; path = "Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2132B03029159D0200F178A0 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		2132B0322915B4D800F178A0 /* categoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryData.swift; sourceTree = "<group>"; };
 		21F460C82904728A0032E157 /* GameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F460CB2904728A0032E157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21F460CD2904728A0032E157 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */,
 				286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */,
 				282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */,
+				2132B03029159D0200F178A0 /* CategoriesTableViewController.swift */,
+				2132B0322915B4D800F178A0 /* categoryData.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				CAE8CBB72905B1F70096521C /* LoginViewController.swift in Sources */,
 				28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */,
 				289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */,
+				2132B03129159D0200F178A0 /* CategoriesTableViewController.swift in Sources */,
 				282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */,
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
@@ -440,6 +447,7 @@
 				286536B7290DA74B00C4457B /* ForgotPasswordViewController.swift in Sources */,
 				2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */,
 				28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */,
+				2132B0332915B4D800F178A0 /* categoryData.swift in Sources */,
 				21F460CE2904728A0032E157 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

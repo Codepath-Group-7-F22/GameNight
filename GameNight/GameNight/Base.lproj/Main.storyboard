@@ -529,19 +529,37 @@
         <!--Board Game Categories-->
         <scene sceneID="EDC-wB-6aX">
             <objects>
-                <tableViewController id="0E7-En-h0N" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategoriesTableViewController" id="0E7-En-h0N" customClass="CategoriesTableViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lc0-zW-7uT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="tintColor" systemColor="systemCyanColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PLJ-e5-Jd3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" id="PLJ-e5-Jd3" customClass="CategoriesCell" customModule="GameNight" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PLJ-e5-Jd3" id="cM0-UT-FyZ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placedholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-9H-IRa">
+                                            <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8gV-9H-IRa" secondAttribute="bottom" id="CL4-Jb-TIA"/>
+                                        <constraint firstItem="8gV-9H-IRa" firstAttribute="top" secondItem="cM0-UT-FyZ" secondAttribute="topMargin" id="LSR-eh-vUB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8gV-9H-IRa" secondAttribute="trailing" id="ohH-M3-UUU"/>
+                                        <constraint firstItem="8gV-9H-IRa" firstAttribute="leading" secondItem="cM0-UT-FyZ" secondAttribute="leadingMargin" id="yZr-Ih-K8R"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="8gV-9H-IRa" id="5RT-iM-mPH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -552,10 +570,13 @@
                     <navigationItem key="navigationItem" title="Board Game Categories" id="ujd-vI-gHm">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="8ax-w1-fJF"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="categoryTable" destination="lc0-zW-7uT" id="hhA-oK-iPW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opd-Qi-Swt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="1554"/>
+            <point key="canvasLocation" x="2089.8550724637685" y="1553.5714285714284"/>
         </scene>
         <!--Players-->
         <scene sceneID="aGS-O3-Kr2">
@@ -599,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9U1-7a-duB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203" y="1554"/>
+            <point key="canvasLocation" x="370" y="1554"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tKJ-ay-sfG">
@@ -709,6 +730,9 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
