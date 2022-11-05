@@ -6,6 +6,7 @@ GameNight App Design Project - README
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
 5. [Week 1 Progress](#Week_1)
+6. [Week 2 Progress](#Week_2)
 
 ## Overview
 ### Description
@@ -259,3 +260,7 @@ GameNight is a social networking app that allows board-game enthusiasts to conne
 ## Week_1
 
 ![GIF](week_1_progress.gif)
+
+## Week_2 
+
+![GIF](week_2_progress.gif)
