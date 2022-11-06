@@ -17,6 +17,7 @@
 		21F460ED2904728C0032E157 /* GameNightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460EC2904728C0032E157 /* GameNightUITests.swift */; };
 		21F460EF2904728C0032E157 /* GameNightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460EE2904728C0032E157 /* GameNightUITestsLaunchTests.swift */; };
 		2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */; };
+		280C05102916F952007907C5 /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C050F2916F952007907C5 /* UserEditProfileViewController.swift */; };
 		282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */; };
 		286536B7290DA74B00C4457B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */; };
 		289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AD6252907973A006A0980 /* RegistrationViewController.swift */; };
@@ -62,6 +63,7 @@
 		21F460EC2904728C0032E157 /* GameNightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightUITests.swift; sourceTree = "<group>"; };
 		21F460EE2904728C0032E157 /* GameNightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCompleteViewController.swift; sourceTree = "<group>"; };
+		280C050F2916F952007907C5 /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
 		282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConfirmationViewController.swift; sourceTree = "<group>"; };
 		286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		289AD6252907973A006A0980 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -135,8 +137,8 @@
 				21F460CB2904728A0032E157 /* AppDelegate.swift */,
 				21F460CD2904728A0032E157 /* SceneDelegate.swift */,
 				21F460D12904728A0032E157 /* Main.storyboard */,
-				21F460D42904728C0032E157 /* Assets.xcassets */,
 				21F460D62904728C0032E157 /* LaunchScreen.storyboard */,
+				21F460D42904728C0032E157 /* Assets.xcassets */,
 				21F460D92904728C0032E157 /* Info.plist */,
 				28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */,
 				28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */,
@@ -147,6 +149,7 @@
 				2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */,
 				286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */,
 				282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */,
+				280C050F2916F952007907C5 /* UserEditProfileViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,
+				280C05102916F952007907C5 /* UserEditProfileViewController.swift in Sources */,
 				286536B7290DA74B00C4457B /* ForgotPasswordViewController.swift in Sources */,
 				2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */,
 				28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */,
