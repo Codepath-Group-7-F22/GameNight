@@ -23,10 +23,21 @@ class CategoryCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.title = selectCategory + " Games"
-        let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=100&client_id=b6GpveZyti"
+        let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=100&client_id=b6GpveZyti" as! String
         print(address)
-        let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti")
+        guard let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti") else {
+            print("Invalid URL")
+            return
+        }
         // Do any additional setup after loading the view.
+        // snippet taken from "https://levelup.gitconnected.com/swift-making-an-api-call-and-fetching-json-acd364c77a71"
+        let task = URLSession.shared.dataTask(with: url){
+                data, response, error in
+                if let data = data, let string = String(data: data, encoding: .utf8){
+                    print(string)
+                }
+            }
+            task.resume()
     }
     
     @IBAction func returnTab(_ sender: Any) {
