@@ -10,11 +10,57 @@ import Parse
 
 class UserProfileViewController: UIViewController {
 
+    let user = PFUser.current()
+    
+    @IBOutlet weak var profilePicView: UIImageView!
+    @IBOutlet weak var fnameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getProfile()
+        profilePicView.setRounded()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getProfile()
+        profilePicView.setRounded()
+    }
+    
+    func getProfile() {
+        //Set up User's Profile View
+        let query = PFQuery(className:"UserProfile")
+        query.whereKey("user", equalTo: user!)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                for object in objects {
+                    print(object as Any)
+                    //Set up the n
+                    self.fnameLabel.text = object["firstName"] as? String
+                    self.locationLabel.text = object["location"] as? String
+                    self.bioLabel.text = object["bio"] as? String
+                    
+                    let imageFile = object["proPic"] as? PFFileObject
+                    if imageFile != nil {
+                        let urlString = imageFile?.url!
+                        let url = URL(string: urlString!)!
+                        self.profilePicView.af.setImage(withURL: url)
+                    }
+                    
+                }
+            }
+        }
+
+    }
+
     
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
@@ -39,4 +85,21 @@ class UserProfileViewController: UIViewController {
     }
     */
 
+}
+
+extension UIImageView {
+    func setRounded() {
+        //Make profile image rounded
+        self.layer.cornerRadius = self.frame.size.width / 2
+        clipsToBounds = true
+        //border
+        self.layer.borderWidth = 4.0
+        self.layer.borderColor = UIColor.white.cgColor
+        //shadow
+        //self.layer.masksToBounds = false
+        //self.layer.shadowColor = UIColor.black.cgColor
+        //self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        //self.layer.shadowOpacity = 1.0
+        //self.layer.shadowRadius = 4.0
+    }
 }
