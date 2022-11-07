@@ -23,9 +23,26 @@ class GameMeetUpsViewController: UIViewController, UITableViewDelegate, UITableV
 
         // Do any additional setup after loading the view.
         
+//        let innerQuery = PFQuery(className: "UserProfile")
+//        innerQuery.whereKey("user", equalTo: PFUser.current())
+        //innerQuery.includeKey("user.objectId")
+//        innerQuery.whereKey("user", equalTo: PFObject(withoutDataWithClassName: "User", objectId: "5oICSdBi78"))
+//        innerQuery.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+//            if let error = error {
+//               // Log details of the failure
+//               print(error.localizedDescription)
+//           } else if let objects = objects {
+//               // The find succeeded.
+//               print("Successfully retrieved \(objects.count) scores.")
+//               // Do something with the found objects
+//               for object in objects {
+//                   print(object as Any)
+//               }
+//           }
+//        }
         //let innerQuery = PFQuery(className: "UserProfile")
+        //innerQuery.whereKey("user", equalTo: PFUser.current())
         let query = PFQuery(className:"GameMeetUp")
-        query.includeKey("user")
         //query.whereKey("user", matchesQuery: innerQuery)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
@@ -68,17 +85,19 @@ class GameMeetUpsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameMeetUpTableViewCell", for: indexPath) as! GameMeetUpTableViewCell
+        cell.gameMeetUp = gameMeetUps[indexPath.row]
         
-        cell.gameEventLabel.text = gameMeetUps[indexPath.row]["eventName"] as? String
-        
-//        val pfgameMeetUps[indexPath.row]["user"] as PFUser
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        cell.startDateLabel.text = formatter.string(from: gameMeetUps[indexPath.row]["startDate"] as! Date)
+//        cell.gameEventLabel.text = gameMeetUps[indexPath.row]["eventName"] as? String
+//
+////        val pfgameMeetUps[indexPath.row]["user"] as PFUser
+//
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//
+//        cell.startDateLabel.text = formatter.string(from: gameMeetUps[indexPath.row]["startDate"] as! Date)
         
 //        let query = PFQuery(className:"UserProfile")
+//        query.whereKey("user", equalTo: gameMeetUps[indexPath.row]["user"])
 //        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
 //            if let error = error {
 //                // Log details of the failure
