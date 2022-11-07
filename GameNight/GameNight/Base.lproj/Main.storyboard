@@ -786,14 +786,14 @@
                         <color key="tintColor" systemColor="systemCyanColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" id="MJf-Yh-aDS" customClass="CategoriesCell" customModule="GameNight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJf-Yh-aDS" id="M3F-GM-YxI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placedholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63s-JY-K1G">
-                                            <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -963,7 +963,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Edit Profile" id="6Qi-Yx-XXO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ocN-FL-fbO" kind="presentation" id="mwX-7x-U5l"/>
+                                <action selector="editProfile:" destination="WZN-tC-iTd" id="8Pc-fW-gd9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -972,6 +972,7 @@
                         <outlet property="fnameLabel" destination="C41-SV-ehh" id="Eiy-Hs-OIO"/>
                         <outlet property="locationLabel" destination="4DJ-lX-E0n" id="o2e-W8-882"/>
                         <outlet property="profilePicView" destination="nat-nA-y7C" id="cUk-iB-JQu"/>
+                        <segue destination="ocN-FL-fbO" kind="presentation" identifier="editProfileSegue" id="tJ8-oQ-Zei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqh-Zu-BLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
