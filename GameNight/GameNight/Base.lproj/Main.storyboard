@@ -963,7 +963,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Edit Profile" id="6Qi-Yx-XXO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ocN-FL-fbO" kind="presentation" id="mwX-7x-U5l"/>
+                                <action selector="editProfile:" destination="WZN-tC-iTd" id="8Pc-fW-gd9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -972,6 +972,7 @@
                         <outlet property="fnameLabel" destination="C41-SV-ehh" id="Eiy-Hs-OIO"/>
                         <outlet property="locationLabel" destination="4DJ-lX-E0n" id="o2e-W8-882"/>
                         <outlet property="profilePicView" destination="nat-nA-y7C" id="cUk-iB-JQu"/>
+                        <segue destination="ocN-FL-fbO" kind="presentation" identifier="editProfileSegue" id="tJ8-oQ-Zei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqh-Zu-BLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

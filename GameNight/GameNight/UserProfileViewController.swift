@@ -64,6 +64,11 @@ class UserProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func editProfile(_ sender: Any) {
+        performSegue(withIdentifier: "editProfileSegue", sender: nil)
+        getProfile()
+        profilePicView.setRounded()
+    }
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
         
