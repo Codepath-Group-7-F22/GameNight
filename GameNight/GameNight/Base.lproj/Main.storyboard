@@ -552,6 +552,96 @@
             </objects>
             <point key="canvasLocation" x="1179.7101449275362" y="1553.5714285714284"/>
         </scene>
+        <!--Add Game Session View Controller-->
+        <scene sceneID="mhD-WG-P50">
+            <objects>
+                <viewController id="x7L-y7-v1I" customClass="AddGameSessionViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YUb-9d-UA2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-Vx-FW9">
+                                <rect key="frame" x="24" y="162" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBS-iY-XF8">
+                                <rect key="frame" x="24" y="215" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xne-Rs-ejQ">
+                                <rect key="frame" x="24" y="100" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Jqb-pQ-fkW">
+                                <rect key="frame" x="193.5" y="213" width="196.5" height="31"/>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-Hm-yb0">
+                                <rect key="frame" x="24" y="254" width="366" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="366" id="A61-hV-qYM"/>
+                                    <constraint firstAttribute="height" constant="120" id="reC-K5-yBw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBE-tI-z30">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Game Session" id="Fgx-pE-MAI">
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="A6x-NZ-JZ2">
+                                            <connections>
+                                                <action selector="addGameSession2:" destination="x7L-y7-v1I" id="Y97-6k-X3U"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="DlN-Ii-bMq">
+                                <rect key="frame" x="202" y="158" width="188" height="31"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N2h-wj-Yj8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DlN-Ii-bMq" firstAttribute="leading" secondItem="V8e-Vx-FW9" secondAttribute="trailing" constant="100" id="0Ck-5F-CJi"/>
+                            <constraint firstItem="Jqb-pQ-fkW" firstAttribute="top" secondItem="DlN-Ii-bMq" secondAttribute="bottom" constant="24" id="1Ju-il-8Fp"/>
+                            <constraint firstItem="V8e-Vx-FW9" firstAttribute="leading" secondItem="N2h-wj-Yj8" secondAttribute="leading" constant="24" id="3Sf-RX-lZb"/>
+                            <constraint firstItem="Jqb-pQ-fkW" firstAttribute="leading" secondItem="CBS-iY-XF8" secondAttribute="trailing" constant="100" id="78y-GH-ATI"/>
+                            <constraint firstItem="CBS-iY-XF8" firstAttribute="top" secondItem="V8e-Vx-FW9" secondAttribute="bottom" constant="32" id="8wp-oD-ltx"/>
+                            <constraint firstItem="2Kh-Hm-yb0" firstAttribute="top" secondItem="xne-Rs-ejQ" secondAttribute="bottom" constant="120" id="Aea-4h-2GX"/>
+                            <constraint firstItem="N2h-wj-Yj8" firstAttribute="trailing" secondItem="DlN-Ii-bMq" secondAttribute="trailing" constant="24" id="FSw-l6-5w5"/>
+                            <constraint firstItem="N2h-wj-Yj8" firstAttribute="trailing" secondItem="2Kh-Hm-yb0" secondAttribute="trailing" constant="24" id="NdS-8v-56t"/>
+                            <constraint firstItem="GBE-tI-z30" firstAttribute="leading" secondItem="N2h-wj-Yj8" secondAttribute="leading" id="OW7-4m-z1a"/>
+                            <constraint firstItem="GBE-tI-z30" firstAttribute="trailing" secondItem="N2h-wj-Yj8" secondAttribute="trailing" id="Qco-oM-qPT"/>
+                            <constraint firstItem="N2h-wj-Yj8" firstAttribute="trailing" secondItem="xne-Rs-ejQ" secondAttribute="trailing" constant="24" id="U9Q-cM-t2H"/>
+                            <constraint firstItem="DlN-Ii-bMq" firstAttribute="top" secondItem="xne-Rs-ejQ" secondAttribute="bottom" constant="24" id="UzH-rz-DBd"/>
+                            <constraint firstItem="2Kh-Hm-yb0" firstAttribute="leading" secondItem="N2h-wj-Yj8" secondAttribute="leading" constant="24" id="fEe-YM-dpd"/>
+                            <constraint firstItem="GBE-tI-z30" firstAttribute="top" secondItem="N2h-wj-Yj8" secondAttribute="top" id="gft-xi-eRk"/>
+                            <constraint firstItem="xne-Rs-ejQ" firstAttribute="leading" secondItem="N2h-wj-Yj8" secondAttribute="leading" constant="24" id="hv6-AM-c0d"/>
+                            <constraint firstItem="N2h-wj-Yj8" firstAttribute="trailing" secondItem="Jqb-pQ-fkW" secondAttribute="trailing" constant="24" id="nAH-En-ZON"/>
+                            <constraint firstItem="V8e-Vx-FW9" firstAttribute="top" secondItem="xne-Rs-ejQ" secondAttribute="bottom" constant="28" id="oTV-EL-2x9"/>
+                            <constraint firstItem="CBS-iY-XF8" firstAttribute="leading" secondItem="N2h-wj-Yj8" secondAttribute="leading" constant="24" id="weT-ve-NSK"/>
+                            <constraint firstItem="xne-Rs-ejQ" firstAttribute="top" secondItem="GBE-tI-z30" secondAttribute="bottom" constant="12" id="zIU-d5-HTD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tZC-Xs-WAF"/>
+                    <connections>
+                        <outlet property="endDatePicker" destination="Jqb-pQ-fkW" id="z9V-so-MdG"/>
+                        <outlet property="eventDescriptionLabel" destination="2Kh-Hm-yb0" id="aCl-mi-7i1"/>
+                        <outlet property="eventNameLabel" destination="xne-Rs-ejQ" id="fur-Ce-sLM"/>
+                        <outlet property="startDatePicker" destination="DlN-Ii-bMq" id="td5-t1-QG2"/>
+                        <segue destination="Pf0-Hj-Un4" kind="presentation" identifier="backToMeetUp" id="x8V-CK-Eoc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ds4-Zr-cZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.81159420289856" y="2270.7589285714284"/>
+        </scene>
         <!--User Edit Profile View Controller-->
         <scene sceneID="tQW-4u-4Z0">
             <objects>
@@ -680,7 +770,15 @@
                                 <action selector="onLogout:" destination="drs-Wv-3M6" id="PDn-mB-Q36"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="Fwd-uv-0ad">
+                            <connections>
+                                <action selector="onAddGameSession:" destination="drs-Wv-3M6" id="IQr-jc-eGx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="x7L-y7-v1I" kind="presentation" identifier="addGameSession" modalPresentationStyle="fullScreen" id="DM8-im-Nol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9U1-7a-duB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -690,6 +788,7 @@
         <scene sceneID="tKJ-ay-sfG">
             <objects>
                 <tabBarController storyboardIdentifier="initController" modalPresentationStyle="fullScreen" id="Pf0-Hj-Un4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ThC-W4-BbA"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mqx-1e-GA8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -712,6 +811,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qLk-KK-khJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MeetUps" image="calendar" catalog="system" id="MgN-Xj-MzB"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2jg-UD-N8k"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nup-AA-Lht">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -784,6 +884,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="DM8-im-Nol"/>
+        <segue reference="x8V-CK-Eoc"/>
         <segue reference="0J2-DZ-9l8"/>
     </inferredMetricsTieBreakers>
     <resources>

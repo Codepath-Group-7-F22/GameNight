@@ -21,6 +21,7 @@
 		282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */; };
 		286536B7290DA74B00C4457B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */; };
 		289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AD6252907973A006A0980 /* RegistrationViewController.swift */; };
+		28ABEC3829185A1D006A9D00 /* AddGameSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABEC3729185A1D006A9D00 /* AddGameSessionViewController.swift */; };
 		28AD23482904BD6000FC37B8 /* GameMeetUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */; };
 		28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */; };
 		28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */; };
@@ -67,6 +68,7 @@
 		282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConfirmationViewController.swift; sourceTree = "<group>"; };
 		286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		289AD6252907973A006A0980 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		28ABEC3729185A1D006A9D00 /* AddGameSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameSessionViewController.swift; sourceTree = "<group>"; };
 		28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMeetUpsViewController.swift; sourceTree = "<group>"; };
 		28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGamesViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */,
 				282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */,
 				280C050F2916F952007907C5 /* UserEditProfileViewController.swift */,
+				28ABEC3729185A1D006A9D00 /* AddGameSessionViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */,
 				289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */,
 				282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */,
+				28ABEC3829185A1D006A9D00 /* AddGameSessionViewController.swift in Sources */,
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,

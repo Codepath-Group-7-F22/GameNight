@@ -17,6 +17,10 @@ class GameMeetUpsViewController: UIViewController {
     }
     
 
+    @IBAction func onAddGameSession(_ sender: Any) {
+        performSegue(withIdentifier: "addGameSession", sender: nil)
+    }
+    
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
         
@@ -29,6 +33,9 @@ class GameMeetUpsViewController: UIViewController {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
         delegate.window?.rootViewController = loginViewController
     }
+    
+    
+    
     /*
     // MARK: - Navigation
 
