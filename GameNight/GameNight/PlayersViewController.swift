@@ -23,6 +23,7 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         
         let query = PFQuery(className:"UserProfile")
+        query.whereKey("user", notEqualTo: PFUser.current()!)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
