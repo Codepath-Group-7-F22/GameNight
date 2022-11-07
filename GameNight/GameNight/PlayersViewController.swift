@@ -39,7 +39,10 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
         }
         
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
+        flow.minimumInteritemSpacing = 0;
+        flow.minimumLineSpacing = 0;
         collectionView.delegate = self
         collectionView.dataSource = self
     }
