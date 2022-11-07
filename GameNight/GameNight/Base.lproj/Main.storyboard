@@ -555,6 +555,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryTable" destination="lc0-zW-7uT" id="hhA-oK-iPW"/>
+                        <segue destination="HA9-dq-aJQ" kind="presentation" identifier="categorySegue" id="DXC-Gm-YmR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opd-Qi-Swt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -592,15 +593,16 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Title" id="Jp0-r8-rRX">
-                        <barButtonItem key="leftBarButtonItem" title="Return" id="Ok1-HS-4S3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Return" id="Ok1-HS-4S3">
+                            <connections>
+                                <action selector="returnTab:" destination="YXc-2S-Obl" id="Pe7-Zb-DFF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="ReturnToCategories" destination="Ok1-HS-4S3" id="frR-kM-I5Q"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQW-gx-wEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2089.8550724637685" y="2939.0625"/>
+            <point key="canvasLocation" x="2090" y="2944"/>
         </scene>
         <!--Players-->
         <scene sceneID="aGS-O3-Kr2">
@@ -745,7 +747,8 @@
         <!--Navigation Controller-->
         <scene sceneID="jef-cR-bpV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HA9-dq-aJQ" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMn-34-5uf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="HA9-dq-aJQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a5h-S6-t5r">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -756,7 +759,6 @@
                         <segue destination="YXc-2S-Obl" kind="relationship" relationship="rootViewController" id="iK9-gY-ttE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EMn-34-5uf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2090" y="2231"/>
         </scene>

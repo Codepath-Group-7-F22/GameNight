@@ -12,6 +12,10 @@ class CategoriesTableViewController: UITableViewController {
     
     var categories: [String] = categoryData.displayableCategories
     
+    struct GameQuery: Codable {
+        var name: String
+    }
+    
     @IBOutlet var categoryTable: UITableView!
     
     override func viewDidLoad() {
@@ -43,7 +47,24 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(categories[indexPath[1]])
+        let selectCategory = categories[indexPath[1]]
+       // let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&client_id=b6GpveZyti" as! String
+        //print(address)
+        //let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti")
+        print(selectCategory)
+        performSegue(withIdentifier: "categorySegue", sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "categorySegue") {
+            var categoryNav = segue.destination as! UINavigationController
+            // print(selectCategory)
+            let categoryController = categoryNav.viewControllers.first as! CategoryCollectionViewController
+            let row = (sender as! IndexPath).row
+            print(categories[row])
+            categoryController.selectCategory = categories[row]
+        }
     }
     
     @IBAction func onLogout(_ sender: Any) {

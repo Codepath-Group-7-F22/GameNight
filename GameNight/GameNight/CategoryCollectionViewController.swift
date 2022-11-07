@@ -7,13 +7,12 @@
 
 import UIKit
 import Parse
-import 
 
 private let reuseIdentifier = "Cell"
 
 class CategoryCollectionViewController: UICollectionViewController {
 
-    @IBOutlet weak var ReturnToCategories: UIBarButtonItem!
+    var selectCategory: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +22,17 @@ class CategoryCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        self.title = selectCategory
+        let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=100&client_id=b6GpveZyti"
+        print(address)
+        let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti")
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func returnTab(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
