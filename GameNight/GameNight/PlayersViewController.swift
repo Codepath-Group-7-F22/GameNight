@@ -8,12 +8,18 @@
 import UIKit
 import Parse
 
-class PlayersViewController: UIViewController {
-
+class PlayersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        self.collectionView.reloadData()
     }
     
     @IBAction func onLogout(_ sender: Any) {
@@ -40,5 +46,29 @@ class PlayersViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        print("You tapped me")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 12
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCollectionViewCell", for: indexPath) as! PlayerCollectionViewCell
+        
+        cell.nameLabel.text = "Hello"
+        
+        return cell
+    }
 
 }
+
+//extension PlayersViewController: UICollectionViewDelegateFlowLayout {
+    
+//}
