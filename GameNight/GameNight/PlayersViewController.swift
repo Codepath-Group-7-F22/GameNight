@@ -12,14 +12,34 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var players = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        
+        
+        let query = PFQuery(className:"UserProfile")
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                for object in objects {
+                    self.players.append(object)
+                }
+                self.collectionView.reloadData()
+            }
+        }
+        
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-        self.collectionView.reloadData()
     }
     
     @IBAction func onLogout(_ sender: Any) {
@@ -54,7 +74,8 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        print(players.count)
+        return players.count
 
     }
     
@@ -62,7 +83,11 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCollectionViewCell", for: indexPath) as! PlayerCollectionViewCell
         
-        cell.nameLabel.text = "Hello"
+        let player = players[indexPath.item]
+        print("yes")
+        print(player["firstName"]!)
+        cell.nameLabel.text = player["firstName"] as? String
+        
         
         return cell
     }
