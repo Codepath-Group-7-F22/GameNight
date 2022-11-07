@@ -22,7 +22,7 @@ class CategoryCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.title = selectCategory
+        self.title = selectCategory + " Games"
         let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=100&client_id=b6GpveZyti"
         print(address)
         let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti")
