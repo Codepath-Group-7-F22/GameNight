@@ -59,7 +59,6 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     @IBAction func onSaveButton(_ sender: Any) {
         print("save button pressed")
         changeProfile()
-        
         self.dismiss(animated: true, completion: nil)
         print("dismissing controller")
         }
@@ -69,9 +68,27 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
         self.dismiss(animated: true, completion: nil)
         print("cancelled user profile edits")
     }
-    
-    
 
+    func createProfile() {
+        let object = PFObject(className: "UserProfile")
+        let imageData = self.proPicView.image!.pngData()
+        object["user"] = self.user
+        if self.fnameField.text != "" {
+            object["firstName"] = self.fnameField.text
+        }
+        if self.locationField.text != "" {
+            object["location"] = self.locationField.text
+        }
+        if self.bioField.text != "" {
+            object["bio"] = self.bioField.text
+        }
+        if self.pickedImg == true {
+            let file = PFFileObject(name: "image.png", data: imageData!)
+            object["proPic"] = file
+        }
+        
+    }
+    
     func changeProfile() {
         //Set up User's Profile View
         let query = PFQuery(className:"UserProfile")
@@ -81,35 +98,38 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
                 // Log details of the failure
                 print(error.localizedDescription)
             } else if let objects = objects {
-                // The find succeeded.
-                print("Successfully editing profile.")
-                // Do something with the found object
-                for object in objects {
-                    if self.fnameField.text != "" {
-                        object["firstName"] = self.fnameField.text
-                    }
-                    if self.locationField.text != "" {
-                        object["location"] = self.locationField.text
-                    }
-                    if self.bioField.text != "" {
-                        object["bio"] = self.bioField.text
-                    }
-                    //upload image
-                    let imageData = self.proPicView.image!.pngData()
-                    if self.pickedImg == true  {
-                        let file = PFFileObject(name: "image.png", data: imageData!)
-                        object["proPic"] = file
-                    }
-                
-                    object.saveInBackground { (success, error) in
-                        if success {
-                            print("successfully saved changes to profile")
-                        } else {
-                            print("error :\(error?.localizedDescription)")
+                if objects.count == 0 {
+                    self.createProfile()
+                } else {
+                    // The find succeeded.
+                    print("Successfully editing profile.")
+                    // Do something with the found object
+                    for object in objects {
+                        if self.fnameField.text != "" {
+                            object["firstName"] = self.fnameField.text
                         }
-                        
-                    }
+                        if self.locationField.text != "" {
+                            object["location"] = self.locationField.text
+                        }
+                        if self.bioField.text != "" {
+                            object["bio"] = self.bioField.text
+                        }
+                        //upload image
+                        let imageData = self.proPicView.image!.pngData()
+                        if self.pickedImg == true  {
+                            let file = PFFileObject(name: "image.png", data: imageData!)
+                            object["proPic"] = file
+                        }
                     
+                        object.saveInBackground { (success, error) in
+                            if success {
+                                print("successfully saved changes to profile")
+                            } else {
+                                print("error :\(error?.localizedDescription)")
+                            }
+                            
+                        }
+                    }
                     //Want to create a set profile function
                     
                 }
