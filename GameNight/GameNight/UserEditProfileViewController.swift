@@ -83,24 +83,18 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
             } else if let objects = objects {
                 // The find succeeded.
                 print("Successfully editing profile.")
-                // Do something with the found object
-                for object in objects {
-                    if self.fnameField.text != "" {
-                        object["firstName"] = self.fnameField.text
-                    }
-                    if self.locationField.text != "" {
-                        object["location"] = self.locationField.text
-                    }
-                    if self.bioField.text != "" {
-                        object["bio"] = self.bioField.text
-                    }
-                    //upload image
+                //create userprofile if not found
+                if objects.count == 0 {
+                    let object = PFObject(className: "UserProfile")
+                    object["user"] = self.user
+                    object["lastName"] = self.fnameField.text
+                    object["location"] = self.locationField.text
+                    object["bio"] = self.bioField.text
                     let imageData = self.proPicView.image!.pngData()
                     if self.pickedImg == true  {
                         let file = PFFileObject(name: "image.png", data: imageData!)
                         object["proPic"] = file
                     }
-                
                     object.saveInBackground { (success, error) in
                         if success {
                             print("successfully saved changes to profile")
@@ -110,6 +104,35 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
                         
                     }
                     
+                } else {
+                    // Do something with the found object
+                    print(objects.count)
+                    for object in objects {
+                        if self.fnameField.text != "" {
+                            object["firstName"] = self.fnameField.text
+                        }
+                        if self.locationField.text != "" {
+                            object["location"] = self.locationField.text
+                        }
+                        if self.bioField.text != "" {
+                            object["bio"] = self.bioField.text
+                        }
+                        //upload image
+                        let imageData = self.proPicView.image!.pngData()
+                        if self.pickedImg == true  {
+                            let file = PFFileObject(name: "image.png", data: imageData!)
+                            object["proPic"] = file
+                        }
+                    
+                        object.saveInBackground { (success, error) in
+                            if success {
+                                print("successfully saved changes to profile")
+                            } else {
+                                print("error :\(error?.localizedDescription)")
+                            }
+                            
+                        }
+                    }
                     //Want to create a set profile function
                     
                 }
