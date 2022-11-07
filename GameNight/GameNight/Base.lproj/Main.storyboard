@@ -675,7 +675,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Pl-cAx">
-                                                    <rect key="frame" x="32" y="26" width="45" height="21"/>
+                                                    <rect key="frame" x="32" y="26" width="112" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -837,8 +837,8 @@
         <image name="62ee05310897779d604d6243_Rectangle 1 (61)" width="400" height="240"/>
         <image name="background1" width="1182" height="2668"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="dice" width="980" height="980"/>
         <image name="dice" catalog="system" width="128" height="116"/>
+        <image name="dice" width="980" height="980"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="placeholder" width="420" height="420"/>

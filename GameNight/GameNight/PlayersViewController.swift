@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class PlayersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -84,9 +85,15 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCollectionViewCell", for: indexPath) as! PlayerCollectionViewCell
         
         let player = players[indexPath.item]
-        print("yes")
-        print(player["firstName"]!)
         cell.nameLabel.text = player["firstName"] as? String
+        
+        let imageFile = player["proPic"] as? PFFileObject
+        if imageFile != nil {
+            let urlString = imageFile?.url!
+            let url = URL(string: urlString!)!
+            cell.profilePicView.af.setImage(withURL: url)
+        }
+        
         
         
         return cell
