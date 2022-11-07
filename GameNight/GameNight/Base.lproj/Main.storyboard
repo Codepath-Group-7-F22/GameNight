@@ -662,6 +662,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background4" id="72Q-R9-rjL">
+                                    <rect key="frame" x="0.0" y="-92" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayerCollectionViewCell" id="1c9-ci-VcT" customClass="PlayerCollectionViewCell" customModule="GameNight" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="202" height="194"/>
@@ -672,11 +676,11 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Pl-cAx">
                                                     <rect key="frame" x="2" y="2" width="198" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-zm-XxA">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-zm-XxA">
                                                     <rect key="frame" x="5" y="42" width="192" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="NGQ-sI-qJO"/>
@@ -700,6 +704,7 @@
                                                 <constraint firstItem="Bca-zm-XxA" firstAttribute="leading" secondItem="GbH-ia-1IR" secondAttribute="leading" constant="5" id="yJu-dQ-i4H"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
                                         <size key="customSize" width="202" height="194"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="Vbt-Pl-cAx" id="0kE-2i-zr8"/>
@@ -851,16 +856,19 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="62ee05310897779d604d6243_Rectangle 1 (61)" width="400" height="240"/>
-        <image name="background1" width="1182" height="2668"/>
+        <image name="background4" width="1682" height="1126"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="dice" catalog="system" width="128" height="116"/>
         <image name="dice" width="980" height="980"/>
+        <image name="dice" catalog="system" width="128" height="116"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="placeholder" width="420" height="420"/>
         <image name="whitelocation" width="696" height="872"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
