@@ -44,8 +44,8 @@ class UserProfileViewController: UIViewController {
                 print("Successfully retrieved \(objects.count) scores.")
                 // Do something with the found objects
                 for object in objects {
-                    print(object as Any)
-                    //Set up the n
+                    //Set up the page
+                    
                     self.fnameLabel.text = object["firstName"] as? String
                     self.locationLabel.text = object["location"] as? String
                     self.bioLabel.text = object["bio"] as? String
@@ -84,6 +84,15 @@ class UserProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let UserEditProfileViewController = segue.destination as! UserEditProfileViewController
+        UserEditProfileViewController.firstnametext = fnameLabel.text ?? ""
+        UserEditProfileViewController.biotext = bioLabel.text ?? ""
+        UserEditProfileViewController.locationtext = locationLabel.text ?? ""
+        
+    }
 
 }
 

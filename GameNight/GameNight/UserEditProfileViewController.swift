@@ -12,6 +12,9 @@ import AlamofireImage
 class UserEditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let user = PFUser.current()
+    var firstnametext = String()
+    var locationtext = String()
+    var biotext = String()
     @IBOutlet weak var proPicView: UIImageView!
     @IBOutlet weak var fnameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
@@ -21,6 +24,11 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fnameField.text = firstnametext
+        locationField.text = locationtext
+        bioField.text = biotext
+        
         
         //Add a gesture recognizer onto the profile picture
         let tap = UITapGestureRecognizer(target: self, action: #selector(UserEditProfileViewController.onCameraButton))
