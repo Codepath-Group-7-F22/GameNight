@@ -595,7 +595,7 @@
             </objects>
             <point key="canvasLocation" x="3074" y="1554"/>
         </scene>
-        <!--Title-->
+        <!--Game Meetups-->
         <scene sceneID="Tnl-bb-gR3">
             <objects>
                 <viewController storyboardIdentifier="gameMeetUpsViewController" id="drs-Wv-3M6" customClass="GameMeetUpsViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
@@ -675,7 +675,7 @@
                         <viewLayoutGuide key="safeArea" id="Q7I-gH-XgF"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="krd-W0-Goj">
+                    <navigationItem key="navigationItem" title="Game Meetups" id="krd-W0-Goj">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="MzV-k6-hBP">
                             <connections>
                                 <action selector="onLogout:" destination="drs-Wv-3M6" id="PDn-mB-Q36"/>
