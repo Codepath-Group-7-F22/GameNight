@@ -25,7 +25,10 @@ class AddGameSessionViewController: UIViewController {
         endDatePicker.minimumDate = Date()
     }
     
-
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func addGameSession(_ sender: Any) {
         let gameSession = PFObject(className: "GameMeetUp")
         gameSession["eventName"] = eventNameLabel.text

@@ -524,6 +524,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Add Game Session" id="Fgx-pE-MAI">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OyV-MT-2JK">
+                                            <connections>
+                                                <action selector="onCancel:" destination="x7L-y7-v1I" id="lGs-yG-F97"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="A6x-NZ-JZ2">
                                             <connections>
                                                 <action selector="addGameSession2:" destination="x7L-y7-v1I" id="Y97-6k-X3U"/>
@@ -728,7 +733,7 @@
             </objects>
             <point key="canvasLocation" x="-650.72463768115949" y="1585.7142857142856"/>
         </scene>
-        <!--Title-->
+        <!--Game Meetups-->
         <scene sceneID="Tnl-bb-gR3">
             <objects>
                 <viewController storyboardIdentifier="gameMeetUpsViewController" id="drs-Wv-3M6" customClass="GameMeetUpsViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
@@ -809,7 +814,7 @@
                         <viewLayoutGuide key="safeArea" id="Q7I-gH-XgF"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="krd-W0-Goj">
+                    <navigationItem key="navigationItem" title="Game Meetups" id="krd-W0-Goj">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="MzV-k6-hBP">
                             <connections>
                                 <action selector="onLogout:" destination="drs-Wv-3M6" id="PDn-mB-Q36"/>
