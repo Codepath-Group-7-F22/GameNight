@@ -13,9 +13,9 @@ import AlamofireImage
 class UserProfileViewController: UIViewController {
 
     let user = PFUser.current()
-    
+    var imagePresent = false
+    var imgUrl = URL(string: String())
     @IBOutlet weak var profilePicView: UIImageView!
-    
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var fnameLabel: UILabel!
@@ -52,8 +52,10 @@ class UserProfileViewController: UIViewController {
                     
                     let imageFile = object["proPic"] as? PFFileObject
                     if imageFile != nil {
+                        self.imagePresent = true
                         let urlString = imageFile?.url!
                         let url = URL(string: urlString!)!
+                        self.imgUrl = url
                         self.profilePicView.af.setImage(withURL: url)
                     }
                     
@@ -92,6 +94,9 @@ class UserProfileViewController: UIViewController {
         UserEditProfileViewController.biotext = bioLabel.text ?? ""
         UserEditProfileViewController.locationtext = locationLabel.text ?? ""
         
+        if imagePresent == true {
+            UserEditProfileViewController.imgUrl = imgUrl
+        }
     }
 
 }

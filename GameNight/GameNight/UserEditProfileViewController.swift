@@ -15,6 +15,7 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
     var firstnametext = String()
     var locationtext = String()
     var biotext = String()
+    var imgUrl = URL(string: String())
     @IBOutlet weak var proPicView: UIImageView!
     @IBOutlet weak var fnameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
@@ -28,6 +29,9 @@ class UserEditProfileViewController: UIViewController, UIImagePickerControllerDe
         fnameField.text = firstnametext
         locationField.text = locationtext
         bioField.text = biotext
+        if imgUrl != nil {
+            self.proPicView.af.setImage(withURL: imgUrl!)
+        }
         
         
         //Add a gesture recognizer onto the profile picture
