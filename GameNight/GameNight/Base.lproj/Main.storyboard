@@ -524,6 +524,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Add Game Session" id="Fgx-pE-MAI">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OyV-MT-2JK">
+                                            <connections>
+                                                <action selector="onCancel:" destination="x7L-y7-v1I" id="lGs-yG-F97"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="A6x-NZ-JZ2">
                                             <connections>
                                                 <action selector="addGameSession2:" destination="x7L-y7-v1I" id="Y97-6k-X3U"/>
@@ -1070,7 +1075,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DM8-im-Nol"/>
         <segue reference="x8V-CK-Eoc"/>
         <segue reference="0J2-DZ-9l8"/>
     </inferredMetricsTieBreakers>
