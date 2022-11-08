@@ -22,6 +22,8 @@
 		2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */; };
 		280C05102916F952007907C5 /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C050F2916F952007907C5 /* UserEditProfileViewController.swift */; };
 		282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */; };
+		283A552F291A13FD0053D4B4 /* DetailsGameMeetUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A552E291A13FD0053D4B4 /* DetailsGameMeetUpTableViewCell.swift */; };
+		283A5531291A14720053D4B4 /* DetailsGameMeetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A5530291A14720053D4B4 /* DetailsGameMeetUpViewController.swift */; };
 		286536B7290DA74B00C4457B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */; };
 		289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AD6252907973A006A0980 /* RegistrationViewController.swift */; };
 		28ABEC3829185A1D006A9D00 /* AddGameSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABEC3729185A1D006A9D00 /* AddGameSessionViewController.swift */; };
@@ -73,6 +75,8 @@
 		2808F340290CD19F00BEFFE6 /* RegistrationCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCompleteViewController.swift; sourceTree = "<group>"; };
 		280C050F2916F952007907C5 /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
 		282B2650290DB1EA00D183E3 /* ForgotPasswordConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConfirmationViewController.swift; sourceTree = "<group>"; };
+		283A552E291A13FD0053D4B4 /* DetailsGameMeetUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsGameMeetUpTableViewCell.swift; sourceTree = "<group>"; };
+		283A5530291A14720053D4B4 /* DetailsGameMeetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsGameMeetUpViewController.swift; sourceTree = "<group>"; };
 		286536B6290DA74B00C4457B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		289AD6252907973A006A0980 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		28ABEC3729185A1D006A9D00 /* AddGameSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameSessionViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				21F460D62904728C0032E157 /* LaunchScreen.storyboard */,
 				21F460D42904728C0032E157 /* Assets.xcassets */,
 				21F460D92904728C0032E157 /* Info.plist */,
+				283A552E291A13FD0053D4B4 /* DetailsGameMeetUpTableViewCell.swift */,
 				28AD23472904BD6000FC37B8 /* GameMeetUpsViewController.swift */,
 				28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */,
 				28AD234B2904BD8700FC37B8 /* BoardGamesViewController.swift */,
@@ -165,6 +170,7 @@
 				214FC5C42918E12A00B289D0 /* categoryData.swift */,
 				214FC5C62918E13300B289D0 /* CategoryCollectionViewController.swift */,
 				214FC5C22918E11F00B289D0 /* CategoriesTableViewController.swift */,
+				283A5530291A14720053D4B4 /* DetailsGameMeetUpViewController.swift */,
 			);
 			path = GameNight;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8CBB72905B1F70096521C /* LoginViewController.swift in Sources */,
+				283A5531291A14720053D4B4 /* DetailsGameMeetUpViewController.swift in Sources */,
 				28AD234E2904BDA400FC37B8 /* PlayersViewController.swift in Sources */,
 				289AD6262907973A006A0980 /* RegistrationViewController.swift in Sources */,
 				282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */,
@@ -456,6 +463,7 @@
 				214FC5C52918E12A00B289D0 /* categoryData.swift in Sources */,
 				214FC5C72918E13300B289D0 /* CategoryCollectionViewController.swift in Sources */,
 				28ABEC3A2918C233006A9D00 /* GameMeetUpTableViewCell.swift in Sources */,
+				283A552F291A13FD0053D4B4 /* DetailsGameMeetUpTableViewCell.swift in Sources */,
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
 				28AD234A2904BD7500FC37B8 /* UserProfileViewController.swift in Sources */,
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,

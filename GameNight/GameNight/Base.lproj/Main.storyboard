@@ -595,6 +595,139 @@
             </objects>
             <point key="canvasLocation" x="3074" y="1554"/>
         </scene>
+        <!--Details Game Meet Up View Controller-->
+        <scene sceneID="6NN-i6-I3X">
+            <objects>
+                <viewController id="mNJ-zL-S4a" customClass="DetailsGameMeetUpViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0yP-A1-lVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B0F-i5-BlE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsGameMeetUpTableViewCell" rowHeight="270" id="DW4-Bn-YU4" customClass="DetailsGameMeetUpTableViewCell" customModule="GameNight" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="270"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DW4-Bn-YU4" id="VcK-0d-O9N">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-jG-cJu">
+                                                    <rect key="frame" x="20" y="23" width="374" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MN2-1g-0rP">
+                                                    <rect key="frame" x="20" y="60" width="140" height="170"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="171" id="pdF-0e-zMx"/>
+                                                        <constraint firstAttribute="width" constant="140" id="xxZ-Mn-0Zk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-NA-EhS">
+                                                    <rect key="frame" x="186" y="61" width="192" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45C-eI-zMW">
+                                                    <rect key="frame" x="186" y="88" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-Yo-Gjj">
+                                                    <rect key="frame" x="186" y="113" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-Da-LhU">
+                                                    <rect key="frame" x="186" y="138" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtD-WY-vUV">
+                                                    <rect key="frame" x="186" y="163" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ View Game Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-v8-ieb">
+                                                    <rect key="frame" x="186" y="210" width="196" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemBlueColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Event Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLd-e6-HaV">
+                                                    <rect key="frame" x="20" y="238" width="362" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7jh-NA-EhS" firstAttribute="top" secondItem="3lC-jG-cJu" secondAttribute="bottom" constant="9" id="16H-O0-6zO"/>
+                                                <constraint firstItem="45C-eI-zMW" firstAttribute="top" secondItem="7jh-NA-EhS" secondAttribute="bottom" constant="4" id="5VI-O7-RRh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cD2-Yo-Gjj" secondAttribute="trailing" constant="12" id="6VW-9d-YoN"/>
+                                                <constraint firstItem="RLd-e6-HaV" firstAttribute="bottom" secondItem="VcK-0d-O9N" secondAttribute="bottomMargin" id="E3v-mt-HGG"/>
+                                                <constraint firstItem="UC9-v8-ieb" firstAttribute="bottom" secondItem="MN2-1g-0rP" secondAttribute="bottom" id="EHm-Ee-AgT"/>
+                                                <constraint firstItem="cD2-Yo-Gjj" firstAttribute="leading" secondItem="MN2-1g-0rP" secondAttribute="trailing" constant="26" id="GTK-VL-heW"/>
+                                                <constraint firstItem="MN2-1g-0rP" firstAttribute="leading" secondItem="3lC-jG-cJu" secondAttribute="leading" id="JV2-4P-VyT"/>
+                                                <constraint firstItem="RLd-e6-HaV" firstAttribute="leading" secondItem="VcK-0d-O9N" secondAttribute="leadingMargin" id="OQN-Cu-pE3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b2d-Da-LhU" secondAttribute="trailing" constant="12" id="OeQ-WT-jYC"/>
+                                                <constraint firstItem="cD2-Yo-Gjj" firstAttribute="top" secondItem="45C-eI-zMW" secondAttribute="bottom" constant="4" id="Qzs-f0-h5p"/>
+                                                <constraint firstItem="45C-eI-zMW" firstAttribute="leading" secondItem="MN2-1g-0rP" secondAttribute="trailing" constant="26" id="SbR-3L-MBM"/>
+                                                <constraint firstItem="MN2-1g-0rP" firstAttribute="top" secondItem="3lC-jG-cJu" secondAttribute="bottom" constant="7.5" id="TZl-l0-cce"/>
+                                                <constraint firstItem="KtD-WY-vUV" firstAttribute="top" secondItem="b2d-Da-LhU" secondAttribute="bottom" constant="4" id="Trc-Hm-QjY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RLd-e6-HaV" secondAttribute="trailing" constant="12" id="VCw-Hz-JOa"/>
+                                                <constraint firstItem="b2d-Da-LhU" firstAttribute="top" secondItem="cD2-Yo-Gjj" secondAttribute="bottom" constant="4" id="Ww8-X8-PWv"/>
+                                                <constraint firstItem="UC9-v8-ieb" firstAttribute="leading" secondItem="MN2-1g-0rP" secondAttribute="trailing" constant="26" id="XIB-ES-cYS"/>
+                                                <constraint firstItem="RLd-e6-HaV" firstAttribute="top" secondItem="MN2-1g-0rP" secondAttribute="bottom" constant="7.5" id="bEY-DR-YmX"/>
+                                                <constraint firstItem="3lC-jG-cJu" firstAttribute="trailing" secondItem="VcK-0d-O9N" secondAttribute="trailingMargin" id="c0g-Du-FLt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UC9-v8-ieb" secondAttribute="trailing" constant="12" id="cZM-0B-BZh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7jh-NA-EhS" secondAttribute="trailing" constant="16" id="fse-7f-x11"/>
+                                                <constraint firstItem="3lC-jG-cJu" firstAttribute="leading" secondItem="VcK-0d-O9N" secondAttribute="leadingMargin" id="g8j-Il-YbT"/>
+                                                <constraint firstItem="b2d-Da-LhU" firstAttribute="leading" secondItem="MN2-1g-0rP" secondAttribute="trailing" constant="26" id="hBh-Na-llZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KtD-WY-vUV" secondAttribute="trailing" constant="12" id="opl-lZ-KYJ"/>
+                                                <constraint firstItem="7jh-NA-EhS" firstAttribute="leading" secondItem="MN2-1g-0rP" secondAttribute="trailing" constant="26" id="rcG-Ni-chM"/>
+                                                <constraint firstItem="3lC-jG-cJu" firstAttribute="top" secondItem="VcK-0d-O9N" secondAttribute="topMargin" constant="12" id="sz5-65-Cla"/>
+                                                <constraint firstItem="KtD-WY-vUV" firstAttribute="leading" secondItem="MN2-1g-0rP" secondAttribute="trailing" constant="26" id="xNb-Tg-JYp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="45C-eI-zMW" secondAttribute="trailing" constant="12" id="zgc-j7-VwL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="endDateLabel" destination="KtD-WY-vUV" id="kee-if-2dz"/>
+                                            <outlet property="eventDescription" destination="RLd-e6-HaV" id="pnR-1I-2Sk"/>
+                                            <outlet property="gameEventLabel" destination="3lC-jG-cJu" id="7Sn-fS-OuZ"/>
+                                            <outlet property="gameNameLabel" destination="7jh-NA-EhS" id="hCh-ey-8zI"/>
+                                            <outlet property="nameFirstLastLabel" destination="45C-eI-zMW" id="vgz-p5-u3w"/>
+                                            <outlet property="profileImageView" destination="MN2-1g-0rP" id="VFj-r6-63d"/>
+                                            <outlet property="startDateLabel" destination="b2d-Da-LhU" id="5Eq-Xu-A0r"/>
+                                            <outlet property="usernameLabel" destination="cD2-Yo-Gjj" id="uzE-aS-apR"/>
+                                            <outlet property="viewGameDescriptionLabel" destination="UC9-v8-ieb" id="2ln-Pz-maB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f13-X5-MHO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zCz-C1-SVe"/>
+                    <connections>
+                        <outlet property="tableView" destination="B0F-i5-BlE" id="8km-lt-QVk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOU-h1-Uxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650.72463768115949" y="1585.7142857142856"/>
+        </scene>
         <!--Title-->
         <scene sceneID="Tnl-bb-gR3">
             <objects>
@@ -667,6 +800,7 @@
                                             <outlet property="profileImageView" destination="vwa-cN-CeH" id="gKy-gS-dcy"/>
                                             <outlet property="startDateLabel" destination="h8B-u4-EI8" id="wEk-9d-SNj"/>
                                             <outlet property="usernameLabel" destination="z5o-EX-moU" id="LoO-ij-uPH"/>
+                                            <segue destination="mNJ-zL-S4a" kind="presentation" identifier="gameMeetUpDetails" modalPresentationStyle="currentContext" id="WP1-Vq-bmc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -786,14 +920,14 @@
                         <color key="tintColor" systemColor="systemCyanColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" id="MJf-Yh-aDS" customClass="CategoriesCell" customModule="GameNight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJf-Yh-aDS" id="M3F-GM-YxI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placedholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63s-JY-K1G">
-                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1070,7 +1204,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DM8-im-Nol"/>
         <segue reference="x8V-CK-Eoc"/>
         <segue reference="0J2-DZ-9l8"/>
     </inferredMetricsTieBreakers>
@@ -1090,6 +1223,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

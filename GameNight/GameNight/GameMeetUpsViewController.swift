@@ -44,6 +44,7 @@ class GameMeetUpsViewController: UIViewController, UITableViewDelegate, UITableV
         //innerQuery.whereKey("user", equalTo: PFUser.current())
         let query = PFQuery(className:"GameMeetUp")
         //query.whereKey("user", matchesQuery: innerQuery)
+        query.includeKeys(["user", "user.username"])
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
@@ -130,4 +131,15 @@ class GameMeetUpsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     */
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gameMeetUpDetails" {
+                    let cell = sender as! UITableViewCell
+                    if let indexPath = tableView.indexPath(for: cell) {
+                        let detailsGameMeetUpViewController = segue.destination as! DetailsGameMeetUpViewController
+                        detailsGameMeetUpViewController.gameMeetUp = gameMeetUps[indexPath.row]
+                        tableView.deselectRow(at: indexPath, animated: true)
+                    }
+        }
+    }
 }
