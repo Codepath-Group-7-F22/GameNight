@@ -7,12 +7,34 @@
 
 import UIKit
 import Parse
+import Foundation
 
 private let reuseIdentifier = "Cell"
 
 class CategoryCollectionViewController: UICollectionViewController {
 
+    var categoryName: String!
     var selectCategory: String!
+    
+    var queryGames = [] as! [[game]]
+    
+    struct Response: Codable {
+        let count: Int
+        let games: [game]
+    }
+    
+    struct game: Codable {
+        let id: String
+        let name: String
+        let price: String
+        let min_players: Int
+        let max_players: Int
+        let min_playtime: Int
+        let max_playtime: Int
+        let min_age: Int
+        let description: String
+        let image_url: String
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +44,28 @@ class CategoryCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.title = selectCategory + " Games"
-        let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=100&client_id=b6GpveZyti" as! String
-        print(address)
-        guard let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti") else {
-            print("Invalid URL")
-            return
-        }
-        // Do any additional setup after loading the view.
-        // snippet taken from "https://levelup.gitconnected.com/swift-making-an-api-call-and-fetching-json-acd364c77a71"
-        let task = URLSession.shared.dataTask(with: url){
-                data, response, error in
-                if let data = data, let string = String(data: data, encoding: .utf8){
-                    print(string)
-                }
+        self.title = categoryName + " Games"
+        let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=2&client_id=b6GpveZyti"
+        if let url = URL(string: address) {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+        if let data = data {
+        let jsonDecoder = JSONDecoder()
+        do {
+            let parsedJSON = try jsonDecoder.decode(Response.self, from: data)
+            //print(parsedJSON.count)
+            //print(parsedJSON.games)
+            for items in parsedJSON.games {
+                print(parsedJSON.games)
+                //print(parsedJSON.games[items].)
+                self.queryGames.append(parsedJSON.games)
             }
-            task.resume()
+            //print(self.queryGames[1].id)
+        } catch {
+                    print(error)
+                }
+               }
+           }.resume()
+        }
     }
     
     @IBAction func returnTab(_ sender: Any) {

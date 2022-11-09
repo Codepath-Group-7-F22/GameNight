@@ -11,10 +11,7 @@ import Parse
 class CategoriesTableViewController: UITableViewController {
     
     var categories: [String] = categoryData.displayableCategories
-    
-    struct GameQuery: Codable {
-        var name: String
-    }
+    var categoryId: [String] = categoryData.categoryId
     
     @IBOutlet var categoryTable: UITableView!
     
@@ -27,7 +24,6 @@ class CategoriesTableViewController: UITableViewController {
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
     }
-    
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,10 +44,6 @@ class CategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectCategory = categories[indexPath[1]]
-       // let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&client_id=b6GpveZyti" as! String
-        //print(address)
-        //let url = URL(string: "https://api.boardgameatlas.com/api/search?client_id=b6GpveZyti")
-        print(selectCategory)
         performSegue(withIdentifier: "categorySegue", sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -63,7 +55,9 @@ class CategoriesTableViewController: UITableViewController {
             let categoryController = categoryNav.viewControllers.first as! CategoryCollectionViewController
             let row = (sender as! IndexPath).row
             print(categories[row])
-            categoryController.selectCategory = categories[row]
+            print(categoryId[row])
+            categoryController.categoryName = categories[row]
+            categoryController.selectCategory = categoryId[row]
         }
     }
     

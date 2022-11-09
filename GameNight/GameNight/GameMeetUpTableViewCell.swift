@@ -53,9 +53,9 @@ class GameMeetUpTableViewCell: UITableViewCell {
                 print(error.localizedDescription)
             } else if let objects = objects {
                 // The find succeeded.
-                print("Successfully retrieved \(objects.count) scores.")
+                //print("Successfully retrieved \(objects.count) scores.")
                 // Do something with the found objects
-                print(objects[0] as Any)
+                //print(objects[0] as Any)
         
         
                 self.usernameLabel.text = objects[0]["firstName"] as? String

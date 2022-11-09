@@ -35,18 +35,18 @@ class UserProfileViewController: UIViewController {
         //Set up User's Profile View
         let query = PFQuery(className:"UserProfile")
         query.whereKey("user", equalTo: user!)
-        print(user!["username"] as! String)
+        //print(user!["username"] as! String)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
-                print(error.localizedDescription)
+                //print(error.localizedDescription)
             } else if let objects = objects {
                 // The find succeeded.
-                print("Successfully retrieved \(objects.count) scores.")
-                print(objects)
+                //print("Successfully retrieved \(objects.count) scores.")
+                //print(objects)
                 // Do something with the found objects
                 for object in objects {
-                    print(object as Any)
+                    //print(object as Any)
                     //Set up the n
                     self.fnameLabel.text = object["firstName"] as? String
                     self.locationLabel.text = object["location"] as? String

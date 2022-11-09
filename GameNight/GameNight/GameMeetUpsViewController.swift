@@ -48,13 +48,13 @@ class GameMeetUpsViewController: UIViewController, UITableViewDelegate, UITableV
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
-                print(error.localizedDescription)
+                //print(error.localizedDescription)
             } else if let objects = objects {
                 // The find succeeded.
-                print("Successfully retrieved \(objects.count) scores.")
+                //print("Successfully retrieved \(objects.count) scores.")
                 // Do something with the found objects
                 for object in objects {
-                    print(object as Any)
+                    //print(object as Any)
                 }
                 self.gameMeetUps = objects
                 self.tableView.reloadData()
