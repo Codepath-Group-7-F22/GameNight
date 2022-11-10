@@ -13,9 +13,9 @@ import AlamofireImage
 class UserProfileViewController: UIViewController {
 
     let user = PFUser.current()
-    
+    var imagePresent = false
+    var imgUrl = URL(string: String())
     @IBOutlet weak var profilePicView: UIImageView!
-    
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var fnameLabel: UILabel!
@@ -44,16 +44,18 @@ class UserProfileViewController: UIViewController {
                 print("Successfully retrieved \(objects.count) scores.")
                 // Do something with the found objects
                 for object in objects {
-                    print(object as Any)
-                    //Set up the n
+                    //Set up the page
+                    
                     self.fnameLabel.text = object["firstName"] as? String
                     self.locationLabel.text = object["location"] as? String
                     self.bioLabel.text = object["bio"] as? String
                     
                     let imageFile = object["proPic"] as? PFFileObject
                     if imageFile != nil {
+                        self.imagePresent = true
                         let urlString = imageFile?.url!
                         let url = URL(string: urlString!)!
+                        self.imgUrl = url
                         self.profilePicView.af.setImage(withURL: url)
                     }
                     
@@ -84,6 +86,18 @@ class UserProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let UserEditProfileViewController = segue.destination as! UserEditProfileViewController
+        UserEditProfileViewController.firstnametext = fnameLabel.text ?? ""
+        UserEditProfileViewController.biotext = bioLabel.text ?? ""
+        UserEditProfileViewController.locationtext = locationLabel.text ?? ""
+        
+        if imagePresent == true {
+            UserEditProfileViewController.imgUrl = imgUrl
+        }
+    }
 
 }
 
