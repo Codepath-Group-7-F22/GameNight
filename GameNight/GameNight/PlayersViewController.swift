@@ -14,8 +14,6 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     
     var players = [PFObject]()
-    var imagePresent = false
-    var imgUrl = URL(string: String())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +41,7 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
+        flow.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
         flow.minimumInteritemSpacing = 0;
         flow.minimumLineSpacing = 0;
         collectionView.delegate = self
@@ -95,10 +94,8 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let imageFile = player["proPic"] as? PFFileObject
         if imageFile != nil {
-            self.imagePresent = true
             let urlString = imageFile?.url!
             let url = URL(string: urlString!)!
-            self.imgUrl = url
             cell.profilePicView.af.setImage(withURL: url)
         }
         
@@ -121,9 +118,13 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         PlayerDetailsViewController.biotext = player["bio"] as? String ?? ""
         PlayerDetailsViewController.locationtext = player["location"] as? String ?? ""
         
-        if imagePresent == true {
-            PlayerDetailsViewController.imgUrl = self.imgUrl
+        let imageFile = player["proPic"] as? PFFileObject
+        if imageFile != nil {
+            let urlString = imageFile?.url!
+            let url = URL(string: urlString!)
+            PlayerDetailsViewController.imgUrl = url
         }
+        
         //Pass player to details controller
         let PlayerDetailsviewController = segue.destination as! PlayerDetailsViewController
 
