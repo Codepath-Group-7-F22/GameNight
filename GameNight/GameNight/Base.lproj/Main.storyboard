@@ -925,14 +925,14 @@
                         <color key="tintColor" systemColor="systemCyanColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" id="MJf-Yh-aDS" customClass="CategoriesCell" customModule="GameNight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJf-Yh-aDS" id="M3F-GM-YxI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placedholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63s-JY-K1G">
-                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -964,7 +964,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryTable" destination="mba-Nj-Jj6" id="Txv-11-gfA"/>
-                        <segue destination="sad-z6-aIC" kind="presentation" identifier="categorySegue" id="ihj-Ap-S7P"/>
+                        <segue destination="pZv-Ma-Cfa" kind="presentation" identifier="categorySegue" modalPresentationStyle="fullScreen" id="VY2-Io-4Do"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cl-TG-kzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -972,81 +972,67 @@
             <point key="canvasLocation" x="2090" y="1554"/>
         </scene>
         <!--Title-->
-        <scene sceneID="fX3-xw-Gxn">
+        <scene sceneID="O9v-GA-mfA">
             <objects>
-                <collectionViewController storyboardIdentifier="CategoryCollectionViewController" id="2Nd-ds-rEK" customClass="CategoryCollectionViewController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pl1-HG-wN0">
+                <viewController id="bzu-7c-1wf" customClass="CategoryGridController" customModule="GameNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oef-pL-c98">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-1J-GtZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KiD-gV-4Se">
+                                    <size key="itemSize" width="201" height="243"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCollectionViewCell" id="YHM-YR-z7c" customClass="GameCollectionViewCell" customModule="GameNight" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DcN-i9-a7w">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice" translatesAutoresizingMaskIntoConstraints="NO" id="mdN-G1-xaS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="242"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="mdN-G1-xaS" id="Iad-qG-13G"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yKY-gu-1dz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7t5-bh-eZR">
-                            <size key="itemSize" width="177" height="223"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCollectionViewCell" id="wvK-pG-4ll" customClass="GameCollectionViewCell" customModule="GameNight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="177" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dxq-f4-TmB" customClass="GameCollectionViewCell" customModule="GameNight" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="177" height="223"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-YR-2Mr">
-                                            <rect key="frame" x="0.0" y="33" width="177" height="190"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-IC-h7R">
-                                            <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="177" height="223"/>
-                                <connections>
-                                    <outlet property="gameImage" destination="PFm-YR-2Mr" id="AaA-dP-naC"/>
-                                    <outlet property="gameName" destination="q8b-IC-h7R" id="qaK-fn-DL9"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="2Nd-ds-rEK" id="sPM-yc-4EP"/>
-                            <outlet property="delegate" destination="2Nd-ds-rEK" id="gwf-Fv-n7Z"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Title" id="1k4-jc-lZv">
-                        <barButtonItem key="leftBarButtonItem" title="Return" id="JWc-IT-1FG">
+                        <constraints>
+                            <constraint firstItem="HDh-1J-GtZ" firstAttribute="top" secondItem="yKY-gu-1dz" secondAttribute="top" id="JZi-sI-zp5"/>
+                            <constraint firstItem="HDh-1J-GtZ" firstAttribute="leading" secondItem="yKY-gu-1dz" secondAttribute="leading" id="N2m-FN-gyd"/>
+                            <constraint firstAttribute="bottom" secondItem="HDh-1J-GtZ" secondAttribute="bottom" id="rBm-gN-E4s"/>
+                            <constraint firstItem="HDh-1J-GtZ" firstAttribute="trailing" secondItem="yKY-gu-1dz" secondAttribute="trailing" id="rap-ih-Dyv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Pw5-qz-lrc">
+                        <barButtonItem key="leftBarButtonItem" title="Return" id="GSW-sA-JXb">
                             <connections>
-                                <action selector="returnTab:" destination="2Nd-ds-rEK" id="mOt-9p-w8b"/>
+                                <action selector="onReturn:" destination="bzu-7c-1wf" id="91y-6X-nPG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ypg-Zr-FAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2089.8550724637685" y="2995.9821428571427"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ix7-TF-kRh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sad-z6-aIC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lGp-wi-1Tc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2Nd-ds-rEK" kind="relationship" relationship="rootViewController" id="Q2a-BA-kqc"/>
+                        <outlet property="gameGridView" destination="HDh-1J-GtZ" id="hFg-s5-Zqi"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lJq-3s-gEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnI-vZ-72Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="2227"/>
+            <point key="canvasLocation" x="2782.608695652174" y="3063.6160714285711"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="h9S-RK-ugX">
@@ -1223,6 +1209,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruc-9R-gMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1232" y="802"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kIP-3o-82l">
+            <objects>
+                <navigationController storyboardIdentifier="categoryNav" automaticallyAdjustsScrollViewInsets="NO" id="pZv-Ma-Cfa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7kE-9Q-mjh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bzu-7c-1wf" kind="relationship" relationship="rootViewController" id="eDj-kY-4sW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKV-vs-lIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2783" y="2336"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

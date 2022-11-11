@@ -8,7 +8,6 @@
 import UIKit
 
 class GameCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var gameName: UILabel!
-    @IBOutlet weak var gameImage: UIImageView!
-    
+
+    @IBOutlet weak var imageView: UIImageView!
 }

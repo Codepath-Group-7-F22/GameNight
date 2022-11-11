@@ -50,10 +50,9 @@ class CategoriesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "categorySegue") {
             var categoryNav = segue.destination as! UINavigationController
-            // print(selectCategory)
-            let categoryController = categoryNav.viewControllers.first as! CategoryCollectionViewController
+            let categoryController = categoryNav.viewControllers.first as! CategoryGridController
             let row = (sender as! IndexPath).row
-            print(row)
+            //print(row)
             //print(categories[row])
             //print(categoryId[row])
             categoryController.categoryName = categories[row]

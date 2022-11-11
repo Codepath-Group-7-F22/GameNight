@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1FC72ED2F6B521D2D979A83B /* Pods_GameNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5316C1BE1D8193F277329083 /* Pods_GameNight.framework */; };
 		211E1B75291C86ED0011B1F5 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E1B74291C86ED0011B1F5 /* GameCollectionViewCell.swift */; };
+		211E1B77291DF13D0011B1F5 /* CategoryGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E1B76291DF13D0011B1F5 /* CategoryGridController.swift */; };
 		214FC5C32918E11F00B289D0 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FC5C22918E11F00B289D0 /* CategoriesTableViewController.swift */; };
 		214FC5C52918E12A00B289D0 /* categoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FC5C42918E12A00B289D0 /* categoryData.swift */; };
-		214FC5C72918E13300B289D0 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FC5C62918E13300B289D0 /* CategoryCollectionViewController.swift */; };
 		21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CB2904728A0032E157 /* AppDelegate.swift */; };
 		21F460CE2904728A0032E157 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F460CD2904728A0032E157 /* SceneDelegate.swift */; };
 		21F460D32904728A0032E157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F460D12904728A0032E157 /* Main.storyboard */; };
@@ -59,9 +59,9 @@
 		10CCC9C012237495C562B4D4 /* Pods-GameNightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNightTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNightTests/Pods-GameNightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1909D1F8C429A7780129D5F0 /* Pods-GameNight-GameNightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight-GameNightUITests.release.xcconfig"; path = "Target Support Files/Pods-GameNight-GameNightUITests/Pods-GameNight-GameNightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		211E1B74291C86ED0011B1F5 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		211E1B76291DF13D0011B1F5 /* CategoryGridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridController.swift; sourceTree = "<group>"; };
 		214FC5C22918E11F00B289D0 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		214FC5C42918E12A00B289D0 /* categoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryData.swift; sourceTree = "<group>"; };
-		214FC5C62918E13300B289D0 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		21F460C82904728A0032E157 /* GameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F460CB2904728A0032E157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21F460CD2904728A0032E157 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,8 +171,8 @@
 				28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */,
 				280C050F2916F952007907C5 /* UserEditProfileViewController.swift */,
 				214FC5C42918E12A00B289D0 /* categoryData.swift */,
-				214FC5C62918E13300B289D0 /* CategoryCollectionViewController.swift */,
 				214FC5C22918E11F00B289D0 /* CategoriesTableViewController.swift */,
+				211E1B76291DF13D0011B1F5 /* CategoryGridController.swift */,
 				211E1B74291C86ED0011B1F5 /* GameCollectionViewCell.swift */,
 			);
 			path = GameNight;
@@ -464,7 +464,6 @@
 				282B2651290DB1EB00D183E3 /* ForgotPasswordConfirmationViewController.swift in Sources */,
 				28ABEC3829185A1D006A9D00 /* AddGameSessionViewController.swift in Sources */,
 				214FC5C52918E12A00B289D0 /* categoryData.swift in Sources */,
-				214FC5C72918E13300B289D0 /* CategoryCollectionViewController.swift in Sources */,
 				28ABEC3A2918C233006A9D00 /* GameMeetUpTableViewCell.swift in Sources */,
 				283A552F291A13FD0053D4B4 /* DetailsGameMeetUpTableViewCell.swift in Sources */,
 				28AD234C2904BD8700FC37B8 /* BoardGamesViewController.swift in Sources */,
@@ -472,6 +471,7 @@
 				21F460CC2904728A0032E157 /* AppDelegate.swift in Sources */,
 				214FC5C32918E11F00B289D0 /* CategoriesTableViewController.swift in Sources */,
 				280C05102916F952007907C5 /* UserEditProfileViewController.swift in Sources */,
+				211E1B77291DF13D0011B1F5 /* CategoryGridController.swift in Sources */,
 				286536B7290DA74B00C4457B /* ForgotPasswordViewController.swift in Sources */,
 				211E1B75291C86ED0011B1F5 /* GameCollectionViewCell.swift in Sources */,
 				2808F341290CD1A000BEFFE6 /* RegistrationCompleteViewController.swift in Sources */,
