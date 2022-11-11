@@ -926,8 +926,8 @@
         <image name="62ee05310897779d604d6243_Rectangle 1 (61)" width="400" height="240"/>
         <image name="background4" width="1682" height="1126"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="dice" width="980" height="980"/>
         <image name="dice" catalog="system" width="128" height="116"/>
+        <image name="dice" width="980" height="980"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="whitelocation" width="696" height="872"/>
