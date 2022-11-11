@@ -14,6 +14,8 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     
     var players = [PFObject]()
+    var imagePresent = false
+    var imgUrl = URL(string: String())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,14 +95,38 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let imageFile = player["proPic"] as? PFFileObject
         if imageFile != nil {
+            self.imagePresent = true
             let urlString = imageFile?.url!
             let url = URL(string: urlString!)!
+            self.imgUrl = url
             cell.profilePicView.af.setImage(withURL: url)
         }
         
         
         
+        
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        //Find the selected player
+        let cell = sender as! PlayerCollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let player = players[indexPath.row]
+        
+        let PlayerDetailsViewController = segue.destination as! PlayerDetailsViewController
+        PlayerDetailsViewController.firstnametext = player["firstName"] as? String ?? ""
+        PlayerDetailsViewController.biotext = player["bio"] as? String ?? ""
+        PlayerDetailsViewController.locationtext = player["location"] as? String ?? ""
+        
+        if imagePresent == true {
+            PlayerDetailsViewController.imgUrl = self.imgUrl
+        }
+        //Pass player to details controller
+        let PlayerDetailsviewController = segue.destination as! PlayerDetailsViewController
+
     }
 
 }
