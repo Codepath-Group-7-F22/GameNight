@@ -43,7 +43,6 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectCategory = categories[indexPath[1]]
         performSegue(withIdentifier: "categorySegue", sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -54,8 +53,9 @@ class CategoriesTableViewController: UITableViewController {
             // print(selectCategory)
             let categoryController = categoryNav.viewControllers.first as! CategoryCollectionViewController
             let row = (sender as! IndexPath).row
-            print(categories[row])
-            print(categoryId[row])
+            print(row)
+            //print(categories[row])
+            //print(categoryId[row])
             categoryController.categoryName = categories[row]
             categoryController.selectCategory = categoryId[row]
         }

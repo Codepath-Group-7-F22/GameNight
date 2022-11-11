@@ -48,7 +48,6 @@ class RegistrationViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         user.email = emailField.text
-        
 
         user.signUpInBackground { [self] (success, error) in
             if success {
@@ -71,7 +70,6 @@ class RegistrationViewController: UIViewController {
             } else {
                 print("Error : \(error?.localizedDescription)")
             }
-
         }
     }
     /*

@@ -8,15 +8,14 @@
 import UIKit
 import Parse
 import Foundation
-
-private let reuseIdentifier = "Cell"
+import AlamofireImage
 
 class CategoryCollectionViewController: UICollectionViewController {
-
+    
     var categoryName: String!
     var selectCategory: String!
     
-    var queryGames = [] as! [[game]]
+    var queryGames = [] as! [game]
     
     struct Response: Codable {
         let count: Int
@@ -38,34 +37,39 @@ class CategoryCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "GameCollectionViewCell")
+        //self.delegate = self
+        //self.dataSource = self
         self.title = categoryName + " Games"
-        let address = "https://api.boardgameatlas.com/api/search?category=" + selectCategory + "&limit=2&client_id=b6GpveZyti"
+        
+        let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        layout.itemSize = CGSize(width: width, height: width * 3/2)
+        
+        let address = "https://api.boardgameatlas.com/api/search?category=" + self.selectCategory as! String + "&limit=5&client_id=b6GpveZyti"
+        print(address)
         if let url = URL(string: address) {
            URLSession.shared.dataTask(with: url) { data, response, error in
         if let data = data {
         let jsonDecoder = JSONDecoder()
         do {
             let parsedJSON = try jsonDecoder.decode(Response.self, from: data)
-            //print(parsedJSON.count)
-            //print(parsedJSON.games)
             for items in parsedJSON.games {
-                print(parsedJSON.games)
-                //print(parsedJSON.games[items].)
-                self.queryGames.append(parsedJSON.games)
+                self.queryGames.append(items)
+
             }
-            //print(self.queryGames[1].id)
         } catch {
                     print(error)
                 }
                }
            }.resume()
         }
+        self.collectionView.reloadData()
     }
     
     @IBAction func returnTab(_ sender: Any) {
@@ -84,23 +88,28 @@ class CategoryCollectionViewController: UICollectionViewController {
     */
 
     // MARK: UICollectionViewDataSource
-
+    /*
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    */
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return queryGames.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as! GameCollectionViewCell
+        let game = queryGames[indexPath.item]
+        let gameName = game.name
+        let gameImage = URL(string: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1629325193747.png")
+        cell.gameName.text = gameName
+        cell.gameImage.af_setImage(withURL: gameImage!)
+        
     
         // Configure the cell
-    
         return cell
     }
 
