@@ -47,15 +47,6 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
-        layout.itemSize = CGSize(width: width, height: width * 3/2)
-        print(layout.estimatedItemSize.width)
-        print(layout.estimatedItemSize.height)
-        //print(view.frame.size.width)
-        
-        //print(width)
-        //print(width * 3/2)
-        
         let address = "https://api.boardgameatlas.com/api/search?categories=" + self.selectCategory + "&limit=5&client_id=b6GpveZyti"
 
         let url = URL(string: address)

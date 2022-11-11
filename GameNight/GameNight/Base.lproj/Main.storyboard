@@ -996,11 +996,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice" translatesAutoresizingMaskIntoConstraints="NO" id="mdN-G1-xaS">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice" translatesAutoresizingMaskIntoConstraints="NO" id="mdN-G1-xaS">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="0Hx-ms-P6h"/>
+                                                        <constraint firstAttribute="width" constant="180" id="xt7-0c-fJV"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mdN-G1-xaS" secondAttribute="trailing" id="JAZ-QQ-sDV"/>
+                                                <constraint firstItem="mdN-G1-xaS" firstAttribute="leading" secondItem="DcN-i9-a7w" secondAttribute="leading" id="JEL-6v-6TB"/>
+                                                <constraint firstItem="mdN-G1-xaS" firstAttribute="top" secondItem="DcN-i9-a7w" secondAttribute="top" id="RGb-pV-nNo"/>
+                                                <constraint firstAttribute="bottom" secondItem="mdN-G1-xaS" secondAttribute="bottom" id="URa-tu-AeS"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="242"/>
                                         <connections>
@@ -1032,7 +1041,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnI-vZ-72Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2782.608695652174" y="3063.6160714285711"/>
+            <point key="canvasLocation" x="2090" y="3026"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="h9S-RK-ugX">
@@ -1226,7 +1235,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKV-vs-lIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783" y="2336"/>
+            <point key="canvasLocation" x="2090" y="2292"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1236,8 +1245,8 @@
     <resources>
         <image name="background2" width="500" height="334"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="dice" catalog="system" width="128" height="113"/>
         <image name="dice" width="980" height="980"/>
+        <image name="dice" catalog="system" width="128" height="113"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="placeholder" width="420" height="420"/>
