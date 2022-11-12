@@ -52,9 +52,6 @@ class CategoriesTableViewController: UITableViewController {
             var categoryNav = segue.destination as! UINavigationController
             let categoryController = categoryNav.viewControllers.first as! CategoryGridController
             let row = (sender as! IndexPath).row
-            //print(row)
-            //print(categories[row])
-            //print(categoryId[row])
             categoryController.categoryName = categories[row]
             categoryController.selectCategory = categoryId[row]
         }

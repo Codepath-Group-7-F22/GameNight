@@ -47,7 +47,7 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         
-        let address = "https://api.boardgameatlas.com/api/search?categories=" + self.selectCategory + "&limit=5&client_id=b6GpveZyti"
+        let address = "https://api.boardgameatlas.com/api/search?categories=" + self.selectCategory + "&limit=100&client_id=b6GpveZyti"
 
         let url = URL(string: address)
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
@@ -82,13 +82,27 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as! GameCollectionViewCell
         let game = queryGames[indexPath.item]
         
-        //cell.nameView.text = game.name
+        cell.nameView.text = game.name
         cell.imageView.af_setImage(withURL: URL(string: game.image_url as! String)!)
         return cell
     }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var gameView = segue.destination as! GameDetailsViewController
+        let item = (sender as! IndexPath).item
+        let game = queryGames[item]
+        gameView.gameName = game.name
+        gameView.imageLink = game.image_url
+        gameView.gameDescription = "Description: " + game.description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        print(game.description)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(queryGames[indexPath.item].name)
+        performSegue(withIdentifier: "detailSegue", sender: indexPath)
+        gameGridView.deselectItem(at: indexPath, animated: true)
     }
     
     @IBAction func onReturn(_ sender: Any) {
