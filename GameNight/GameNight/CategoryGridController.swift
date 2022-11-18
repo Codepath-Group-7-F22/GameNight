@@ -14,8 +14,11 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
     
     var categoryName: String!
     var selectCategory: String!
+    var categoryAddress: String!
+    var curr_count: String!
     
     var queryGames = [] as! [game]
+    var finishedLoading = false
     
     struct Response: Codable {
         let count: Int
@@ -35,6 +38,8 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         let image_url: String
     }
     
+    let myRefreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = categoryName + " Games"
@@ -47,31 +52,42 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         
+        loadGames()
+        myRefreshControl.addTarget(self, action: #selector(loadGames), for: .valueChanged)
+        gameGridView.refreshControl = myRefreshControl
+        
+        //print(queryGames)
+        //self.gameGridView.reloadData()
+    }
+    
+    @objc func loadGames(){
+        self.finishedLoading = false
         let address = "https://api.boardgameatlas.com/api/search?categories=" + self.selectCategory + "&limit=100&client_id=b6GpveZyti"
-
         let url = URL(string: address)
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             if let data = data {
                 let jsonDecoder = JSONDecoder()
                 do {
                     let parsedJSON = try jsonDecoder.decode(Response.self, from: data)
+                    self.queryGames.removeAll()
                     for items in parsedJSON.games {
                         self.queryGames.append(items)
+                        //print(self.queryGames.count)
                     }
                 } catch {
                     print(error)
                 }
                 DispatchQueue.main.async {
                     self.gameGridView.reloadData()
+                    self.myRefreshControl.endRefreshing()
                 }
+                self.finishedLoading = true
             }
             else {
                 print(error!.localizedDescription)
             }
         }
         task.resume()
-        //print(queryGames.count)
-        //self.gameGridView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,8 +103,6 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var gameView = segue.destination as! GameDetailsViewController
         let item = (sender as! IndexPath).item
@@ -103,6 +117,43 @@ class CategoryGridController: UIViewController, UICollectionViewDelegate, UIColl
         print(queryGames[indexPath.item].name)
         performSegue(withIdentifier: "detailSegue", sender: indexPath)
         gameGridView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == queryGames.count - 1 && queryGames.count >= 100 && queryGames.count % 100 == 0 && finishedLoading == true {
+            self.finishedLoading = false
+            loadMoreGames()
+        }
+    }
+    
+    func loadMoreGames(){
+        
+        let categoryURL = "https://api.boardgameatlas.com/api/search?categories=" + self.selectCategory + "&limit=100&client_id=b6GpveZyti" + "&skip=" + String(self.queryGames.count)
+        print(categoryURL)
+        
+        let url = URL(string: categoryURL)
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            if let data = data {
+                let jsonDecoder = JSONDecoder()
+                do {
+                    let parsedJSON = try jsonDecoder.decode(Response.self, from: data)
+                    for items in parsedJSON.games {
+                        self.queryGames.append(items)
+                    }
+                } catch {
+                    print(error)
+                }
+                DispatchQueue.main.async {
+                    self.gameGridView.reloadData()
+                    self.myRefreshControl.endRefreshing()
+                    self.finishedLoading = true
+                }
+            }
+            else {
+                print(error!.localizedDescription)
+            }
+        }
+        task.resume()
     }
     
     @IBAction func onReturn(_ sender: Any) {

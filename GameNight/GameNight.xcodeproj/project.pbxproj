@@ -178,10 +178,10 @@
 				CABAB4F3291955D500B463A7 /* PlayerCollectionViewCell.swift */,
 				28AD23492904BD7500FC37B8 /* UserProfileViewController.swift */,
 				280C050F2916F952007907C5 /* UserEditProfileViewController.swift */,
-				21C56A7B29200D8B0084B92A /* CategoriesTableViewController.swift */,
 				21C56A7D29200D8B0084B92A /* categoryData.swift */,
-				21C56A7C29200D8B0084B92A /* CategoryGridController.swift */,
 				21C56A7E29200D8B0084B92A /* GameCollectionViewCell.swift */,
+				21C56A7C29200D8B0084B92A /* CategoryGridController.swift */,
+				21C56A7B29200D8B0084B92A /* CategoriesTableViewController.swift */,
 				21C56A7F29200D8B0084B92A /* GameDetailsViewController.swift */,
 			);
 			path = GameNight;

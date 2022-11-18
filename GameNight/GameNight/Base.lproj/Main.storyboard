@@ -913,14 +913,14 @@
                         <color key="tintColor" systemColor="systemCyanColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" id="RLw-tY-vpn" customClass="CategoriesCell" customModule="GameNight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RLw-tY-vpn" id="alQ-lJ-sxC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placedholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-Gk-R3x">
-                                            <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1075,7 +1075,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="gameDescription" text="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="NKZ-zU-Yar">
-                                <rect key="frame" x="44" y="319" width="327" height="459"/>
+                                <rect key="frame" x="44" y="319" width="327" height="220"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -1102,7 +1102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HxU-WG-rbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="3710"/>
+            <point key="canvasLocation" x="2089.8550724637685" y="3709.8214285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PJg-QW-qGw">
@@ -1460,8 +1460,8 @@
     <resources>
         <image name="1-dice-clipart-free-clipart-images-image" width="300" height="300"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="dice" width="980" height="980"/>
         <image name="dice" catalog="system" width="128" height="113"/>
+        <image name="dice" width="980" height="980"/>
         <image name="liquidblue" width="736" height="1472"/>
         <image name="logo" width="622" height="516"/>
         <image name="person.3" catalog="system" width="128" height="62"/>

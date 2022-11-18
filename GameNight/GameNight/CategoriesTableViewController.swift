@@ -54,6 +54,7 @@ class CategoriesTableViewController: UITableViewController {
             let row = (sender as! IndexPath).row
             categoryController.categoryName = categories[row]
             categoryController.selectCategory = categoryId[row]
+            UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         }
     }
     

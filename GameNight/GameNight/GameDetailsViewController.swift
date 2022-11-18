@@ -13,10 +13,10 @@ class GameDetailsViewController: UIViewController {
     var gameSummary: String!
     var imageLink: String!
     var gameDescription: String!
-    var minPlayers: Int!
-    var maxPlayers: Int!
-    var minPlaytime: Int!
-    var maxPlaytime: Int!
+    var minPlayers: Int? = nil
+    var maxPlayers: Int? = nil
+    var minPlaytime: Int? = nil
+    var maxPlaytime: Int? = nil
     
     @IBOutlet weak var gameImage: UIImageView!
     @IBOutlet weak var navItem: UINavigationItem!
@@ -26,8 +26,13 @@ class GameDetailsViewController: UIViewController {
         print(gameName as! String)
         navItem.title = gameName
         gameImage.af_setImage(withURL: URL(string: imageLink as! String)!)
+        if gameDescription == "Description: " {
+            descriptionView.text = "Summary Not Available"
+            descriptionView.textAlignment = NSTextAlignment.center;
+        } else {
         descriptionView.text = gameDescription
         descriptionView.textContainer.maximumNumberOfLines = 10
+        }
     }
     
 
