@@ -1075,7 +1075,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="gameDescription" text="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="NKZ-zU-Yar">
-                                <rect key="frame" x="44" y="319" width="327" height="220"/>
+                                <rect key="frame" x="44" y="319" width="327" height="488"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>

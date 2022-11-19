@@ -31,7 +31,6 @@ class GameDetailsViewController: UIViewController {
             descriptionView.textAlignment = NSTextAlignment.center;
         } else {
         descriptionView.text = gameDescription
-        descriptionView.textContainer.maximumNumberOfLines = 10
         }
     }
     
